@@ -1,0 +1,38 @@
+{
+ "test": "QRNG reference module on raw samples of a 156-qubit IBM processor (ibm_fez): one H on every qubit, 4096 shots, no mitigation",
+ "sealed_plan_sha256": "0c3f39db25530195afe2f65ff4fbcfebc09cea2be6ace008757f3a207270922e",
+ "raw_sha256": "01edd075ee7df7baf87df1a76300c7243b44e393040f12cc69577c91f19e7ba1",
+ "raw_bytes": 79872,
+ "K1": true,
+ "K2": true,
+ "K3": true,
+ "K4": true,
+ "ok": true,
+ "h_mcv_bits_per_byte": 7.519128,
+ "h_design": 6.0,
+ "ones_fraction": 0.505399,
+ "lag1": 0.003527,
+ "health": {
+  "apt_cutoff": 25,
+  "apt_failures": 0,
+  "apt_window": 512,
+  "rct_cutoff": 5,
+  "rct_failures": 0
+ },
+ "out_bytes": 37024,
+ "checker": {
+  "rows": 1,
+  "accepted": 1,
+  "problems": [],
+  "verdict": "PASS"
+ },
+ "certification": "statistical",
+ "post_hoc": "per-qubit (per-channel) test afterwards, NOT in the sealed plan: 40 of 156 qubits fall below a 0.9 bit/bit lower bound at 4096 shots; the threshold for the next sealed run is to be fixed in advance",
+ "sorok": [
+  {
+   "t": 0,
+   "F_mert": 7.519128,
+   "F_jos": 6.0
+  }
+ ]
+}

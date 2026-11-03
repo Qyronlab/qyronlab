@@ -1,0 +1,13 @@
+{
+ "plan_sha256": "0c3f39db25530195afe2f65ff4fbcfebc09cea2be6ace008757f3a207270922e",
+ "job": "dbh3lghq260s73bued8g",
+ "backend": "ibm_fez",
+ "n_qubits": 156,
+ "shots": 4096,
+ "usage_remaining_before": 92,
+ "calibration_sha256": "6648d44ed4a129ece847b40032bc01fdac6de9c4c669090c415bb96af098f3de",
+ "raw_sha256": "01edd075ee7df7baf87df1a76300c7243b44e393040f12cc69577c91f19e7ba1",
+ "raw_bytes": 79872,
+ "usage_remaining_after": 89,
+ "quantum_seconds": null
+}

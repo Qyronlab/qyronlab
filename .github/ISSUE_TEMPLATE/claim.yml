@@ -1,0 +1,37 @@
+name: Claim (ÁLLÍTÁS)
+description: A statement about the world, with its source or its recipe. One claim per issue.
+title: "[claim] "
+labels: ["claim", "open"]
+body:
+  - type: textarea
+    id: statement
+    attributes:
+      label: The claim, in one or two sentences
+      description: What you say is true. Numbers with units. No adjectives.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: How do you know
+      options:
+        - measured (I ran it; raw data and job records are linked below)
+        - read (a source says it; the source is linked below)
+        - computed (a script derives it; the script and its output hash are linked below)
+        - assumption (I think so; this is what the room should test)
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source or recipe
+      description: A DOI/URL for a read claim; for a measured or computed claim, the exact commands, the input hashes and the output hashes so that a stranger can recompute it without talking to you.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: What would refute it
+      description: The number or outcome that would make you withdraw the claim. Written before anyone rechecks.
+    validations:
+      required: true

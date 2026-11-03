@@ -1,0 +1,193 @@
+{
+ "test": "QRNG reference module, fifth sealed run (r4) on ibm_fez after another recalibration: Q1 a third state?; Q2 how far back does a validated prior reach",
+ "sealed_plan_sha256": "d430f33f781132ecd6cf7bfab358599a0098c48868cd25bd691d0f3615187468",
+ "raw_sha256_E": "2961af44dfa400c46150efd99f6823153a1c747bf17d88c2356fd55dd995e832",
+ "raw_sha256_F": "054ec3ab3d431fc7e897a47b415fc61ff7dc2d7b34df3438312cb51bd6801889",
+ "K1_E": true,
+ "K2_E": true,
+ "K3_E": true,
+ "K4_E": true,
+ "K5_E": true,
+ "K6_E": true,
+ "K1_F": true,
+ "K2_F": true,
+ "K3_F": true,
+ "K4_F": true,
+ "K5_F": true,
+ "K6_F": true,
+ "K_S1": true,
+ "K_S2": true,
+ "K_S3": true,
+ "K_V1": true,
+ "K_V2": true,
+ "K_V3": true,
+ "K_V4": true,
+ "K_V5": true,
+ "K_V6": true,
+ "same_calibration": true,
+ "calib_last_update_before_E": "2026-11-03 04:27:58+01:00",
+ "calib_last_update_after_F": "2026-11-03 04:27:58+01:00",
+ "r3_last_update": "2026-11-02 19:20:09+01:00",
+ "pearson": {
+  "E_r0": 0.778003,
+  "E_r1": 0.483146,
+  "E_r2AB": 0.871481,
+  "E_r3CD": 0.860918,
+  "F_r0": 0.738991,
+  "F_r1": 0.521457,
+  "F_r2AB": 0.849983,
+  "F_r3CD": 0.84346,
+  "E_F": 0.919208
+ },
+ "best_state": "r2AB",
+ "used": {
+  "P1_r3CD": true,
+  "P2_r2AB": true,
+  "P3_r0": true,
+  "P4_r1": false
+ },
+ "gains": {
+  "P1_r3CD": 0.20059,
+  "P2_r2AB": 0.198013,
+  "P3_r0": 0.12913,
+  "P4_r1": 0.0
+ },
+ "coverage_of_F": {
+  "none": 0.9936,
+  "P1_r3CD": 0.9103,
+  "P2_r2AB": 0.8846,
+  "P3_r0": 0.9167,
+  "P4_r1": 0.9936,
+  "cov_min": 0.859
+ },
+ "gate": {
+  "P1_r3CD": {
+   "r": 0.860918,
+   "z_mean": 0.9343,
+   "z_max": 9.6909,
+   "compatible": true,
+   "used": true,
+   "channels_combined": 154
+  },
+  "P2_r2AB": {
+   "r": 0.871481,
+   "z_mean": 0.9599,
+   "z_max": 7.8007,
+   "compatible": true,
+   "used": true,
+   "channels_combined": 154
+  },
+  "P3_r0": {
+   "r": 0.778003,
+   "z_mean": 0.9942,
+   "z_max": 8.7452,
+   "compatible": true,
+   "used": true,
+   "channels_combined": 152
+  },
+  "P4_r1": {
+   "r": 0.483146,
+   "z_mean": 1.032,
+   "z_max": 21.323,
+   "compatible": true,
+   "used": false,
+   "channels_combined": 0
+  }
+ },
+ "arms_E": {
+  "none": {
+   "accepted": true,
+   "h_mcv": 7.551258,
+   "ones_fraction": 0.50302,
+   "excluded": [
+    72
+   ],
+   "h_acc": 7.254418,
+   "h_eff": 7.254418,
+   "out_bytes": 35968,
+   "checker": "PASS",
+   "checker_rc": 0,
+   "lag1": -0.004268
+  },
+  "P1_r3CD": {
+   "accepted": true,
+   "h_mcv": 7.551258,
+   "ones_fraction": 0.50302,
+   "excluded": [
+    72
+   ],
+   "h_acc": 7.455008,
+   "h_eff": 7.455008,
+   "out_bytes": 37024,
+   "checker": "PASS",
+   "checker_rc": 0,
+   "lag1": -0.004268
+  },
+  "P2_r2AB": {
+   "accepted": true,
+   "h_mcv": 7.551258,
+   "ones_fraction": 0.50302,
+   "excluded": [
+    72
+   ],
+   "h_acc": 7.452431,
+   "h_eff": 7.452431,
+   "out_bytes": 37024,
+   "checker": "PASS",
+   "checker_rc": 0,
+   "lag1": -0.004268
+  },
+  "P3_r0": {
+   "accepted": true,
+   "h_mcv": 7.551258,
+   "ones_fraction": 0.50302,
+   "excluded": [
+    72
+   ],
+   "h_acc": 7.383548,
+   "h_eff": 7.383548,
+   "out_bytes": 36512,
+   "checker": "PASS",
+   "checker_rc": 0,
+   "lag1": -0.004268
+  },
+  "P4_r1": {
+   "accepted": true,
+   "h_mcv": 7.551258,
+   "ones_fraction": 0.50302,
+   "excluded": [
+    72
+   ],
+   "h_acc": 7.254418,
+   "h_eff": 7.254418,
+   "out_bytes": 35968,
+   "checker": "PASS",
+   "checker_rc": 0,
+   "lag1": -0.004268
+  }
+ },
+ "F_none": {
+  "accepted": true,
+  "h_mcv": 7.580452,
+  "ones_fraction": 0.5022,
+  "excluded": [
+   72
+  ],
+  "h_acc": 7.232817,
+  "h_eff": 7.232817,
+  "out_bytes": 35968,
+  "checker": "PASS",
+  "checker_rc": 0,
+  "lag1": 0.003657
+ },
+ "certification": "statistical",
+ "sorok": [
+  {
+   "t": 0,
+   "F_mert": 0.860918,
+   "F_jos": 0.622
+  }
+ ],
+ "full_evaluation": "evaluation.json",
+ "ok": true
+}

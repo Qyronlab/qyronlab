@@ -1,0 +1,49 @@
+{
+ "test": "QRNG reference module, second sealed run (r1) on ibm_fez: per-qubit channel rule (H 0.5 bit/bit, policy exclude) and per-channel accounting fixed before the data; K7 = the r0 per-qubit bias pattern repeats",
+ "sealed_plan_sha256": "ffef322b403580b41b2d209ff3bf6b59e74fb439d9fdc0d99d9c97812a7cf5a9",
+ "raw_sha256": "bf4cd6045f281366dc2d9dd4bf843c28a05a85d1047921800bb29cff2f13d9ef",
+ "raw_bytes": 79872,
+ "K1": true,
+ "K2": true,
+ "K3": true,
+ "K4": true,
+ "K5": true,
+ "K6": true,
+ "K7": false,
+ "ok": false,
+ "h_mcv_bits_per_byte": 7.569433,
+ "h_design": 6.0,
+ "h_acc_bits_per_byte": 7.299763,
+ "h_eff_bits_per_byte": 7.299763,
+ "excluded_channels": [],
+ "ones_fraction": 0.505719,
+ "lag1": 0.003905,
+ "health": {
+  "apt_cutoff": 25,
+  "apt_failures": 0,
+  "apt_window": 512,
+  "rct_cutoff": 5,
+  "rct_failures": 0
+ },
+ "out_bytes": 35968,
+ "pearson_r_p1_r0_r1": 0.356273,
+ "K7_min_r_sealed": 0.651,
+ "K7_expected_r": 0.9006,
+ "checker": {
+  "rows": 1,
+  "accepted": 1,
+  "audit_rows": 1,
+  "problems": [],
+  "verdict": "PASS"
+ },
+ "certification": "statistical",
+ "sorok": [
+  {
+   "t": 0,
+   "F_mert": 7.569433,
+   "F_jos": 6.0
+  }
+ ],
+ "full_evaluation": "evaluation.json",
+ "post_hoc": "posthoc_k7.json (K7 diagnostics, not re-scored)"
+}

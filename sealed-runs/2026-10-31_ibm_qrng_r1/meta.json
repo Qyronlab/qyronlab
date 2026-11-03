@@ -1,0 +1,19 @@
+{
+ "plan_sha256": "ffef322b403580b41b2d209ff3bf6b59e74fb439d9fdc0d99d9c97812a7cf5a9",
+ "job": "dbir1401h92s738426qg",
+ "backend": "ibm_fez",
+ "n_qubits": 156,
+ "shots": 4096,
+ "submitted_utc_local_clock": "2026-10-31T09:10:40Z",
+ "usage_remaining_before": 89,
+ "calibration_sha256": "e6895f0b89725879a3e6f5a7aaab1dcf99b7a2b8c16455da873a8e75727d3dc9",
+ "raw_sha256": "bf4cd6045f281366dc2d9dd4bf843c28a05a85d1047921800bb29cff2f13d9ef",
+ "raw_bytes": 79872,
+ "usage_remaining_after": 86,
+ "quantum_seconds": null,
+ "timestamps": {
+  "created": "2026-10-31T09:10:40.934564Z",
+  "finished": "2026-10-31T09:10:50.11714Z",
+  "running": "2026-10-31T09:10:42.039106Z"
+ }
+}

@@ -1,0 +1,1078 @@
+{
+ "generated": "2026-11-03T05:51:22Z",
+ "tests": [
+  {
+   "id": "2026-10-21_ibm_bell_v0",
+   "date": "2026-10-21",
+   "title": "Pair decay while waiting, v0",
+   "what": "Fidelity of an entangled pair after waiting, raw and with one echo",
+   "limits": "one device, one qubit pair, one day; the model lacked the pair's phase rotation",
+   "verdict": "refuted",
+   "acceptance": {
+    "K1_raw": 1,
+    "K1_visszhang": 2,
+    "K1": false,
+    "K2": false,
+    "K3": true
+   },
+   "ok": false,
+   "tolerance": 0.03,
+   "floor": 0.78,
+   "machine": "ibm_kingston",
+   "sealed_sha256": "54fc9ba3e34bb54654cd712ee556a2cd31d6f5ac9caa9c4e41823bff77757852",
+   "sealed_matches_file": true,
+   "x_label": "waiting time (µs)",
+   "series": [
+    {
+     "arm": "raw",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.947,
+       "predicted": 0.9497
+      },
+      {
+       "x": 25,
+       "measured": 0.8091,
+       "predicted": 0.8791
+      },
+      {
+       "x": 50,
+       "measured": 0.6262,
+       "predicted": 0.8176
+      },
+      {
+       "x": 100,
+       "measured": 0.2878,
+       "predicted": 0.7178
+      },
+      {
+       "x": 150,
+       "measured": 0.1965,
+       "predicted": 0.6428
+      },
+      {
+       "x": 200,
+       "measured": 0.2739,
+       "predicted": 0.5868
+      },
+      {
+       "x": 300,
+       "measured": 0.4441,
+       "predicted": 0.5153
+      },
+      {
+       "x": 400,
+       "measured": 0.3623,
+       "predicted": 0.4784
+      },
+      {
+       "x": 600,
+       "measured": 0.4072,
+       "predicted": 0.4551
+      },
+      {
+       "x": 800,
+       "measured": 0.4143,
+       "predicted": 0.4573
+      }
+     ]
+    },
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9517,
+       "predicted": 0.9497
+      },
+      {
+       "x": 25,
+       "measured": 0.8511,
+       "predicted": 0.8791
+      },
+      {
+       "x": 50,
+       "measured": 0.7849,
+       "predicted": 0.8176
+      },
+      {
+       "x": 100,
+       "measured": 0.6853,
+       "predicted": 0.7178
+      },
+      {
+       "x": 150,
+       "measured": 0.5857,
+       "predicted": 0.6428
+      },
+      {
+       "x": 200,
+       "measured": 0.5317,
+       "predicted": 0.5868
+      },
+      {
+       "x": 300,
+       "measured": 0.4172,
+       "predicted": 0.5153
+      },
+      {
+       "x": 400,
+       "measured": 0.3608,
+       "predicted": 0.4784
+      },
+      {
+       "x": 600,
+       "measured": 0.3276,
+       "predicted": 0.4551
+      },
+      {
+       "x": 800,
+       "measured": 0.322,
+       "predicted": 0.4573
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-21_ibm_bell_v0/REVEAL.md",
+    "report": "sealed-runs/2026-10-21_ibm_bell_v0/report.json",
+    "prediction": "sealed-runs/2026-10-21_ibm_bell_v0/plan.json",
+    "fingerprint": "sealed-runs/2026-10-21_ibm_bell_v0.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-21_ibm_bell_v1",
+   "date": "2026-10-21",
+   "title": "Pair decay while waiting, v1",
+   "what": "Same test with the pair's rotation calibrated; a negative control without it",
+   "limits": "one device, one qubit pair, one day; waiting inside a chip, not a network memory",
+   "verdict": "confirmed",
+   "acceptance": {
+    "K1_raw": 9,
+    "K1_vh": 11,
+    "K1": true,
+    "K2": true,
+    "K2_gap": 0.69140625,
+    "K3": true
+   },
+   "ok": true,
+   "tolerance": 0.03,
+   "floor": null,
+   "machine": "ibm_kingston",
+   "sealed_sha256": "c1edbc03335c0a6975632e926ce8a0865edbd56a88662b4021c8d5a096d6c0bf",
+   "sealed_matches_file": true,
+   "x_label": "waiting time (µs)",
+   "series": [
+    {
+     "arm": "raw",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9448,
+       "predicted": 0.9503
+      },
+      {
+       "x": 25,
+       "measured": 0.8157,
+       "predicted": 0.8113
+      },
+      {
+       "x": 50,
+       "measured": 0.6218,
+       "predicted": 0.6283
+      },
+      {
+       "x": 75,
+       "measured": 0.4226,
+       "predicted": 0.4485
+      },
+      {
+       "x": 100,
+       "measured": 0.2681,
+       "predicted": 0.3071
+      },
+      {
+       "x": 150,
+       "measured": 0.1892,
+       "predicted": 0.197
+      },
+      {
+       "x": 200,
+       "measured": 0.3083,
+       "predicted": 0.2702
+      },
+      {
+       "x": 300,
+       "measured": 0.438,
+       "predicted": 0.4397
+      },
+      {
+       "x": 400,
+       "measured": 0.3623,
+       "predicted": 0.3804
+      },
+      {
+       "x": 600,
+       "measured": 0.4014,
+       "predicted": 0.4169
+      },
+      {
+       "x": 800,
+       "measured": 0.4351,
+       "predicted": 0.4312
+      }
+     ]
+    },
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9539,
+       "predicted": 0.9503
+      },
+      {
+       "x": 25,
+       "measured": 0.8601,
+       "predicted": 0.8787
+      },
+      {
+       "x": 50,
+       "measured": 0.7964,
+       "predicted": 0.8146
+      },
+      {
+       "x": 75,
+       "measured": 0.7561,
+       "predicted": 0.7572
+      },
+      {
+       "x": 100,
+       "measured": 0.6885,
+       "predicted": 0.7058
+      },
+      {
+       "x": 150,
+       "measured": 0.6104,
+       "predicted": 0.6184
+      },
+      {
+       "x": 200,
+       "measured": 0.5347,
+       "predicted": 0.5484
+      },
+      {
+       "x": 300,
+       "measured": 0.4417,
+       "predicted": 0.448
+      },
+      {
+       "x": 400,
+       "measured": 0.3838,
+       "predicted": 0.3851
+      },
+      {
+       "x": 600,
+       "measured": 0.3059,
+       "predicted": 0.327
+      },
+      {
+       "x": 800,
+       "measured": 0.3096,
+       "predicted": 0.3169
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-21_ibm_bell_v1/REVEAL.md",
+    "report": "sealed-runs/2026-10-21_ibm_bell_v1/report.json",
+    "prediction": "sealed-runs/2026-10-21_ibm_bell_v1/plan_v1.json",
+    "fingerprint": "sealed-runs/2026-10-21_ibm_bell_v1.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-21_ibm_dd_v0",
+   "date": "2026-10-21",
+   "title": "How many echo pulses",
+   "what": "Fidelity after 300 µs with 0–16 echo pulses",
+   "limits": "300 µs only, one pair; energy decay sets the bound",
+   "verdict": "confirmed",
+   "acceptance": {
+    "K1": true,
+    "K1_db": 6
+   },
+   "ok": true,
+   "tolerance": 0.04,
+   "floor": null,
+   "machine": "ibm_kingston",
+   "sealed_sha256": "1a8c912132ce32c726a0d33e42cdfcb78dfed8de5d01a11c00ee967184bd768f",
+   "sealed_matches_file": false,
+   "x_label": "number of echo pulses",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.3286,
+       "predicted": 0.2913
+      },
+      {
+       "x": 1,
+       "measured": 0.4321,
+       "predicted": 0.448
+      },
+      {
+       "x": 2,
+       "measured": 0.4634,
+       "predicted": 0.448
+      },
+      {
+       "x": 4,
+       "measured": 0.4402,
+       "predicted": 0.448
+      },
+      {
+       "x": 8,
+       "measured": 0.4387,
+       "predicted": 0.448
+      },
+      {
+       "x": 16,
+       "measured": 0.4312,
+       "predicted": 0.448
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-21_ibm_dd_v0/REVEAL.md",
+    "report": "sealed-runs/2026-10-21_ibm_dd_v0/report.json",
+    "prediction": "sealed-runs/2026-10-21_ibm_dd_v0/plan_dd.json",
+    "fingerprint": "sealed-runs/2026-10-21_ibm_dd_v0.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-21_ibm_swap_v0",
+   "date": "2026-10-21",
+   "title": "Entanglement swap at a middle node, v0",
+   "what": "Fidelity of the swapped outer pair after the first pair waited",
+   "limits": "4 of 6 within tolerance; the product model was pessimistic",
+   "verdict": "partial",
+   "acceptance": {
+    "K1": false,
+    "K1_db": 4,
+    "K2": true,
+    "K3": true
+   },
+   "ok": false,
+   "tolerance": 0.04,
+   "floor": 0.78,
+   "machine": "ibm_kingston",
+   "sealed_sha256": "66f7b56008c376be2105eaccc81f74b2e7f89130d824885d263054685a5b2c21",
+   "sealed_matches_file": true,
+   "x_label": "waiting time (µs)",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.8462,
+       "predicted": 0.8384
+      },
+      {
+       "x": 25,
+       "measured": 0.7605,
+       "predicted": 0.7399
+      },
+      {
+       "x": 50,
+       "measured": 0.6943,
+       "predicted": 0.658
+      },
+      {
+       "x": 100,
+       "measured": 0.5789,
+       "predicted": 0.5334
+      },
+      {
+       "x": 150,
+       "measured": 0.4961,
+       "predicted": 0.4476
+      },
+      {
+       "x": 300,
+       "measured": 0.345,
+       "predicted": 0.3241
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-21_ibm_swap_v0/REVEAL.md",
+    "report": "sealed-runs/2026-10-21_ibm_swap_v0/report.json",
+    "prediction": "sealed-runs/2026-10-21_ibm_swap_v0/plan_c.json",
+    "fingerprint": "sealed-runs/2026-10-21_ibm_swap_v0.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-21_ibm_swap_v1",
+   "date": "2026-10-21",
+   "title": "Entanglement swap at a middle node, v1",
+   "what": "Same with the pair's own decay measured before the run",
+   "limits": "one chain of four qubits, one day",
+   "verdict": "confirmed",
+   "acceptance": {
+    "K1": true,
+    "K1_db": 6,
+    "K2": true,
+    "K3": true
+   },
+   "ok": true,
+   "tolerance": 0.04,
+   "floor": 0.78,
+   "machine": "ibm_kingston",
+   "sealed_sha256": "db622e67a58b539cc136d04b7c604ebeb00aa5b42858fd47eb8e9524340ddd63",
+   "sealed_matches_file": true,
+   "x_label": "waiting time (µs)",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.835,
+       "predicted": 0.8384
+      },
+      {
+       "x": 25,
+       "measured": 0.7676,
+       "predicted": 0.7486
+      },
+      {
+       "x": 50,
+       "measured": 0.6992,
+       "predicted": 0.6729
+      },
+      {
+       "x": 100,
+       "measured": 0.5679,
+       "predicted": 0.5552
+      },
+      {
+       "x": 150,
+       "measured": 0.4866,
+       "predicted": 0.4715
+      },
+      {
+       "x": 300,
+       "measured": 0.3337,
+       "predicted": 0.3428
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-21_ibm_swap_v1/REVEAL.md",
+    "report": "sealed-runs/2026-10-21_ibm_swap_v1/report.json",
+    "prediction": "sealed-runs/2026-10-21_ibm_swap_v1/plan_c1.json",
+    "fingerprint": "sealed-runs/2026-10-21_ibm_swap_v1.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-21_ibm_teleport_v0",
+   "date": "2026-10-21",
+   "title": "Teleportation over a waiting pair, v0",
+   "what": "Average fidelity of six input states, raw and echo arm",
+   "limits": "echo arm confirmed 6/6, raw arm refuted 1/6: the pair drifted in the 40 minutes since calibration",
+   "verdict": "partial",
+   "acceptance": {
+    "K1_raw": 1,
+    "K1_vh": 6,
+    "K1": false,
+    "K2": true,
+    "K3": true
+   },
+   "ok": false,
+   "tolerance": 0.04,
+   "floor": 0.8,
+   "machine": "ibm_kingston",
+   "sealed_sha256": "2a945bdf565d2ebea326d990d496a83ea6388c6090cafb36627ed580769a5c77",
+   "sealed_matches_file": true,
+   "x_label": "waiting time (µs)",
+   "series": [
+    {
+     "arm": "raw",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9335,
+       "predicted": 0.927
+      },
+      {
+       "x": 25,
+       "measured": 0.8403,
+       "predicted": 0.788
+      },
+      {
+       "x": 50,
+       "measured": 0.6936,
+       "predicted": 0.585
+      },
+      {
+       "x": 100,
+       "measured": 0.4547,
+       "predicted": 0.3929
+      },
+      {
+       "x": 150,
+       "measured": 0.4883,
+       "predicted": 0.5498
+      },
+      {
+       "x": 300,
+       "measured": 0.5698,
+       "predicted": 0.4896
+      }
+     ]
+    },
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9338,
+       "predicted": 0.927
+      },
+      {
+       "x": 25,
+       "measured": 0.8883,
+       "predicted": 0.8797
+      },
+      {
+       "x": 50,
+       "measured": 0.8464,
+       "predicted": 0.8373
+      },
+      {
+       "x": 100,
+       "measured": 0.7919,
+       "predicted": 0.7653
+      },
+      {
+       "x": 150,
+       "measured": 0.7394,
+       "predicted": 0.7075
+      },
+      {
+       "x": 300,
+       "measured": 0.6257,
+       "predicted": 0.5947
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-21_ibm_teleport_v0/REVEAL.md",
+    "report": "sealed-runs/2026-10-21_ibm_teleport_v0/report.json",
+    "prediction": "sealed-runs/2026-10-21_ibm_teleport_v0/plan_t.json",
+    "fingerprint": "sealed-runs/2026-10-21_ibm_teleport_v0.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-22_ibm_teleport_v1",
+   "date": "2026-10-22",
+   "title": "Teleportation over a waiting pair, v1",
+   "what": "Echo arm only; the pair's decay measured 2.5 minutes before the run",
+   "limits": "one triple, one day; waiting inside a chip",
+   "verdict": "confirmed",
+   "acceptance": {
+    "K1": true,
+    "K1_db": 6,
+    "K3": true
+   },
+   "ok": true,
+   "tolerance": 0.03,
+   "floor": 0.8,
+   "machine": "ibm_kingston",
+   "sealed_sha256": "584f994030c1ca36790e2a8541bb327fdcdae1885b9c9d05a7135c4291708c39",
+   "sealed_matches_file": true,
+   "x_label": "waiting time (µs)",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9435,
+       "predicted": 0.9434
+      },
+      {
+       "x": 25,
+       "measured": 0.8675,
+       "predicted": 0.8855
+      },
+      {
+       "x": 50,
+       "measured": 0.8205,
+       "predicted": 0.8347
+      },
+      {
+       "x": 100,
+       "measured": 0.7523,
+       "predicted": 0.7512
+      },
+      {
+       "x": 150,
+       "measured": 0.6847,
+       "predicted": 0.687
+      },
+      {
+       "x": 300,
+       "measured": 0.58,
+       "predicted": 0.5715
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-22_ibm_teleport_v1/REVEAL.md",
+    "report": "sealed-runs/2026-10-22_ibm_teleport_v1/report.json",
+    "prediction": "sealed-runs/2026-10-22_ibm_teleport_v1/plan_t1.json",
+    "fingerprint": "sealed-runs/2026-10-22_ibm_teleport_v1.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-22_ibm_teleport_v1b_age",
+   "date": "2026-10-22",
+   "title": "Teleportation, v1b: a 40-minute-old calibration",
+   "what": "Same protocol, fresh calibration at 17:05 UTC, test run 40.5 minutes later (processor's own timestamps in receipts/)",
+   "limits": "one triple, one day; 300 µs point +0.033 just outside tolerance (measured better than predicted); the 41–96 min band stays open",
+   "verdict": "confirmed",
+   "acceptance": {
+    "K1": true,
+    "K1_db": 5,
+    "K3": true
+   },
+   "ok": true,
+   "tolerance": 0.03,
+   "floor": 0.8,
+   "machine": "ibm_kingston",
+   "sealed_sha256": "7010b356fc0d98c10ad10f405b26804c36f5073f923a32ab003be82dfa2a3d72",
+   "sealed_matches_file": true,
+   "x_label": "waiting time (µs)",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9446,
+       "predicted": 0.9446
+      },
+      {
+       "x": 25,
+       "measured": 0.8694,
+       "predicted": 0.8838
+      },
+      {
+       "x": 50,
+       "measured": 0.8174,
+       "predicted": 0.8308
+      },
+      {
+       "x": 100,
+       "measured": 0.7489,
+       "predicted": 0.7446
+      },
+      {
+       "x": 150,
+       "measured": 0.6859,
+       "predicted": 0.6792
+      },
+      {
+       "x": 300,
+       "measured": 0.598,
+       "predicted": 0.5646
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-22_ibm_teleport_v1b_age/REVEAL.md",
+    "report": "sealed-runs/2026-10-22_ibm_teleport_v1b_age/report.json",
+    "prediction": "sealed-runs/2026-10-22_ibm_teleport_v1b_age/plan_t1.json",
+    "fingerprint": "sealed-runs/2026-10-22_ibm_teleport_v1b_age.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-25_quafu_r0s",
+   "date": "2026-10-25",
+   "title": "Bell pair at zero wait on a second vendor (Quafu Shenglian)",
+   "what": "Pair fidelity of two qubit pairs, two runs of one sealed plan; raw and readout-corrected",
+   "limits": "sealed per-qubit readout correction gave correlations above 1, so the sealed result is NOT accepted; entanglement stands without correction (raw F 0.79-0.83); the pairwise correction shown is post hoc",
+   "verdict": "refuted",
+   "acceptance": {
+    "K1": true,
+    "K2": true,
+    "K3": true,
+    "K4": true
+   },
+   "ok": false,
+   "tolerance": null,
+   "floor": null,
+   "machine": null,
+   "sealed_sha256": "15a9f2890cca07f06ecb2428665d0850f03fea03ac93f46d08d053a3da35e00f",
+   "sealed_matches_file": true,
+   "x_label": "run/pair index",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9623,
+       "predicted": 0.993
+      },
+      {
+       "x": 1,
+       "measured": 0.9766,
+       "predicted": 0.9723
+      },
+      {
+       "x": 2,
+       "measured": 0.971,
+       "predicted": 0.993
+      },
+      {
+       "x": 3,
+       "measured": 0.9911,
+       "predicted": 0.9723
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-25_quafu_r0s/REVEAL.md",
+    "report": "sealed-runs/2026-10-25_quafu_r0s/report.json",
+    "prediction": "sealed-runs/2026-10-25_quafu_r0s/plan_r0s.json",
+    "fingerprint": "sealed-runs/2026-10-25_quafu_r0s.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-28_ibm_qrng_r0",
+   "date": "2026-10-28",
+   "title": "QRNG reference module on a 156-qubit processor",
+   "what": "Min-entropy estimate of 79 872 raw bytes (H on every qubit, 4096 shots) against the sealed design minimum; health tests, independent checker",
+   "limits": "one run, one processor; certification is statistical only - statistics cannot prove a quantum source; per-qubit bias found afterwards, outside the sealed plan",
+   "verdict": "confirmed",
+   "acceptance": {
+    "K1": true,
+    "K2": true,
+    "K3": true,
+    "K4": true
+   },
+   "ok": true,
+   "tolerance": null,
+   "floor": null,
+   "machine": null,
+   "sealed_sha256": "0c3f39db25530195afe2f65ff4fbcfebc09cea2be6ace008757f3a207270922e",
+   "sealed_matches_file": true,
+   "x_label": "block",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 7.5191,
+       "predicted": 6.0
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-28_ibm_qrng_r0/REVEAL.md",
+    "report": "sealed-runs/2026-10-28_ibm_qrng_r0/report.json",
+    "prediction": "sealed-runs/2026-10-28_ibm_qrng_r0/plan_r0.json",
+    "fingerprint": "sealed-runs/2026-10-28_ibm_qrng_r0.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-31_ibm_qrng_r1",
+   "date": "2026-10-31",
+   "title": "QRNG module, second sealed run: per-qubit rule and bias stability",
+   "what": "Same circuit three days later; per-qubit channel rule (0.5 bit/bit, exclude) and per-channel accounting fixed before the data; K7: does the r0 per-qubit bias pattern repeat?",
+   "limits": "K1-K6 confirmed (module accepts, 0 excluded channels, accounting 7.30 bits/byte, checker PASS); K7 refuted: per-qubit bias correlation r0-r1 is 0.36, not >= 0.651 - the bias moves between days while the vendor's readout-error table stays put; statistical certification only",
+   "verdict": "partial",
+   "acceptance": {
+    "K1": true,
+    "K2": true,
+    "K3": true,
+    "K4": true,
+    "K5": true,
+    "K6": true,
+    "K7": false,
+    "K7_min_r_sealed": 0.651,
+    "K7_expected_r": 0.9006
+   },
+   "ok": false,
+   "tolerance": null,
+   "floor": null,
+   "machine": null,
+   "sealed_sha256": "ffef322b403580b41b2d209ff3bf6b59e74fb439d9fdc0d99d9c97812a7cf5a9",
+   "sealed_matches_file": true,
+   "x_label": "block",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 7.5694,
+       "predicted": 6.0
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-31_ibm_qrng_r1/REVEAL.md",
+    "report": "sealed-runs/2026-10-31_ibm_qrng_r1/report.json",
+    "prediction": "sealed-runs/2026-10-31_ibm_qrng_r1/plan_r1.json",
+    "fingerprint": "sealed-runs/2026-10-31_ibm_qrng_r1.sha256.md"
+   }
+  },
+  {
+   "id": "2026-11-02_ibm_qrng_r2",
+   "date": "2026-11-02",
+   "title": "QRNG module, third sealed run: bias within one calibration",
+   "what": "Two jobs 1.3 s apart under one vendor calibration; K1-K6 per job; K7: does the per-qubit bias repeat within minutes? K8: does its correlation fall with calibration age? K9: vendor table stable?",
+   "limits": "K1-K6 on both jobs, K7 (r 0.91 >= 0.622; label-shuffle control p = 1/10001) and K9 (0.94) confirmed; K8 refuted: the five-day-old run matches today (0.85) better than the two-day-old one (0.47) - the bias is a property of the calibration state, not of time; statistical certification only",
+   "verdict": "partial",
+   "acceptance": {
+    "K1_A": true,
+    "K2_A": true,
+    "K3_A": true,
+    "K4_A": true,
+    "K5_A": true,
+    "K6_A": true,
+    "K1_B": true,
+    "K2_B": true,
+    "K3_B": true,
+    "K4_B": true,
+    "K5_B": true,
+    "K6_B": true,
+    "K7": true,
+    "K8": false,
+    "K9": true,
+    "K7_min_r_sealed": 0.622,
+    "K7_expected_r": 0.872
+   },
+   "ok": false,
+   "tolerance": null,
+   "floor": null,
+   "machine": null,
+   "sealed_sha256": "f631d095d5477037ed06df5f6193ecd2fc0166c057f4477a5ddcfa0293edef94",
+   "sealed_matches_file": true,
+   "x_label": "block",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9071,
+       "predicted": 0.622
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-11-02_ibm_qrng_r2/REVEAL.md",
+    "report": "sealed-runs/2026-11-02_ibm_qrng_r2/report.json",
+    "prediction": "sealed-runs/2026-11-02_ibm_qrng_r2/plan_r2.json",
+    "fingerprint": "sealed-runs/2026-11-02_ibm_qrng_r2.sha256.md"
+   }
+  },
+  {
+   "id": "2026-11-02_ibm_qrng_r3",
+   "date": "2026-11-02",
+   "title": "QRNG module, fourth sealed run: the pattern returns; a validated prior pays",
+   "what": "After the vendor's recalibration: Q1 does the per-qubit bias pattern return to a known state; Q2 does a prior chosen before the run (validated on the current block) improve the buyer's bound - three arms on C, D as hold-out",
+   "limits": "All sealed criteria held: the pattern returned (r 0.91 with the r2 state), the new state is stable (0.92), the validated prior gave +0.21 bit/byte and +1056 output bytes with the bound covering the hold-out in 92 % of channels; statistical certification only",
+   "verdict": "confirmed",
+   "acceptance": {
+    "K1_C": true,
+    "K2_C": true,
+    "K3_C": true,
+    "K4_C": true,
+    "K5_C": true,
+    "K6_C": true,
+    "K1_D": true,
+    "K2_D": true,
+    "K3_D": true,
+    "K4_D": true,
+    "K5_D": true,
+    "K6_D": true,
+    "K_R1": true,
+    "K_R2": true,
+    "K_P1": true,
+    "K_P2": true
+   },
+   "ok": true,
+   "tolerance": null,
+   "floor": null,
+   "machine": null,
+   "sealed_sha256": "72e659f9dc1afcdb280c2070eb887e15454c73bfe8124bd8bae08b910234380f",
+   "sealed_matches_file": true,
+   "x_label": "block",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9134,
+       "predicted": 0.622
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-11-02_ibm_qrng_r3/REVEAL.md",
+    "report": "sealed-runs/2026-11-02_ibm_qrng_r3/report.json",
+    "prediction": "sealed-runs/2026-11-02_ibm_qrng_r3/plan_r3.json",
+    "fingerprint": "sealed-runs/2026-11-02_ibm_qrng_r3.sha256.md"
+   }
+  },
+  {
+   "id": "2026-11-03_ibm_qrng_r4",
+   "date": "2026-11-03",
+   "title": "QRNG module, fifth sealed run: no third state; prior value graded by age",
+   "what": "After the next recalibration: Q1 does a third calibration state appear; Q2 how far back does a validated prior reach - four priors chosen before the run by age (r3, r2, r0, r1), block F as hold-out",
+   "limits": "All sealed criteria held: known state (r 0.87 with r2, 0.86 with r3, 0.48 with r1), stable (0.92); priors 1-2 recalibrations old +0.20 bit/byte, the 5-day-old one +0.13, the other-state one refused; hold-out coverage 0.88-0.92; statistical certification only",
+   "verdict": "confirmed",
+   "acceptance": {
+    "K1_E": true,
+    "K2_E": true,
+    "K3_E": true,
+    "K4_E": true,
+    "K5_E": true,
+    "K6_E": true,
+    "K1_F": true,
+    "K2_F": true,
+    "K3_F": true,
+    "K4_F": true,
+    "K5_F": true,
+    "K6_F": true,
+    "K_S1": true,
+    "K_S2": true,
+    "K_S3": true,
+    "K_V1": true,
+    "K_V2": true,
+    "K_V3": true,
+    "K_V4": true,
+    "K_V5": true,
+    "K_V6": true
+   },
+   "ok": true,
+   "tolerance": null,
+   "floor": null,
+   "machine": null,
+   "sealed_sha256": "d430f33f781132ecd6cf7bfab358599a0098c48868cd25bd691d0f3615187468",
+   "sealed_matches_file": true,
+   "x_label": "block",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.8609,
+       "predicted": 0.622
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-11-03_ibm_qrng_r4/REVEAL.md",
+    "report": "sealed-runs/2026-11-03_ibm_qrng_r4/report.json",
+    "prediction": "sealed-runs/2026-11-03_ibm_qrng_r4/plan_r4.json",
+    "fingerprint": "sealed-runs/2026-11-03_ibm_qrng_r4.sha256.md"
+   }
+  },
+  {
+   "id": "2026-10-22_ibm_teleport_v1_shifted",
+   "date": "2026-10-22",
+   "title": "Same prediction, 96-minute-old calibration",
+   "what": "The identical sealed prediction re-run 96 minutes after the pair calibration",
+   "limits": "single repeat; the processor's daily table was byte-identical between the two runs; the 40–96 min band is unmeasured",
+   "verdict": "refuted",
+   "acceptance": {
+    "K1": false,
+    "K1_db": 0,
+    "K3": true
+   },
+   "ok": false,
+   "tolerance": 0.03,
+   "floor": 0.8,
+   "machine": "ibm_kingston",
+   "sealed_sha256": "584f994030c1ca36790e2a8541bb327fdcdae1885b9c9d05a7135c4291708c39",
+   "sealed_matches_file": true,
+   "x_label": "waiting time (µs)",
+   "series": [
+    {
+     "arm": "echo",
+     "points": [
+      {
+       "x": 0,
+       "measured": 0.9044,
+       "predicted": 0.9434
+      },
+      {
+       "x": 25,
+       "measured": 0.7841,
+       "predicted": 0.8855
+      },
+      {
+       "x": 50,
+       "measured": 0.7069,
+       "predicted": 0.8347
+      },
+      {
+       "x": 100,
+       "measured": 0.6264,
+       "predicted": 0.7512
+      },
+      {
+       "x": 150,
+       "measured": 0.5783,
+       "predicted": 0.687
+      },
+      {
+       "x": 300,
+       "measured": 0.5375,
+       "predicted": 0.5715
+      }
+     ]
+    }
+   ],
+   "files": {
+    "reveal": "sealed-runs/2026-10-22_ibm_teleport_v1/REVEAL.md",
+    "report": "sealed-runs/2026-10-22_ibm_teleport_v1/report_shifted_96min.json",
+    "prediction": "sealed-runs/2026-10-22_ibm_teleport_v1/plan_t1.json",
+    "fingerprint": "sealed-runs/2026-10-22_ibm_teleport_v1.sha256.md"
+   }
+  }
+ ],
+ "counts": {
+  "refuted": 3,
+  "confirmed": 8,
+  "partial": 4
+ },
+ "rule": "prediction sealed by SHA-256 before the run; raw data revealed after; tolerance fixed in advance",
+ "classical_bound_teleportation": 0.6666666666666666
+}

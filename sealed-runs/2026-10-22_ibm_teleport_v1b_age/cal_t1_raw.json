@@ -1,0 +1,398 @@
+{
+ "gep": "ibm_kingston",
+ "harmas": [
+  31,
+  32,
+  33
+ ],
+ "job": "dbd44kni0auc7394lbf0",
+ "loves": 2048,
+ "kalibracio_sha256": "0ea09bab814d9fb173a806e8dba01d499516ee0d960ecd1601da46a96be4e5a9",
+ "ido_vege": "20261022T170553Z",
+ "sorok": [
+  {
+   "bazis": "XX",
+   "delay_us": 0,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "11": 976,
+    "00": 984,
+    "10": 36,
+    "01": 52
+   },
+   "E": 0.9140625
+  },
+  {
+   "bazis": "YY",
+   "delay_us": 0,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "10": 991,
+    "01": 975,
+    "11": 38,
+    "00": 44
+   },
+   "E": -0.919921875
+  },
+  {
+   "bazis": "ZZ",
+   "delay_us": 0,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "00": 1008,
+    "11": 975,
+    "01": 29,
+    "10": 36
+   },
+   "E": 0.9365234375
+  },
+  {
+   "bazis": "XX",
+   "delay_us": 50,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "00": 826,
+    "11": 802,
+    "10": 204,
+    "01": 216
+   },
+   "E": 0.58984375
+  },
+  {
+   "bazis": "YY",
+   "delay_us": 50,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "11": 203,
+    "01": 815,
+    "10": 817,
+    "00": 213
+   },
+   "E": -0.59375
+  },
+  {
+   "bazis": "ZZ",
+   "delay_us": 50,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "10": 235,
+    "01": 296,
+    "00": 804,
+    "11": 713
+   },
+   "E": 0.4814453125
+  },
+  {
+   "bazis": "XX",
+   "delay_us": 100,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "10": 243,
+    "01": 228,
+    "11": 821,
+    "00": 756
+   },
+   "E": 0.5400390625
+  },
+  {
+   "bazis": "YY",
+   "delay_us": 100,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "00": 264,
+    "11": 247,
+    "01": 768,
+    "10": 769
+   },
+   "E": -0.5009765625
+  },
+  {
+   "bazis": "ZZ",
+   "delay_us": 100,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "00": 759,
+    "11": 737,
+    "01": 295,
+    "10": 257
+   },
+   "E": 0.4609375
+  },
+  {
+   "bazis": "XX",
+   "delay_us": 200,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "00": 658,
+    "10": 378,
+    "11": 689,
+    "01": 323
+   },
+   "E": 0.3154296875
+  },
+  {
+   "bazis": "YY",
+   "delay_us": 200,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "01": 670,
+    "10": 646,
+    "11": 372,
+    "00": 360
+   },
+   "E": -0.28515625
+  },
+  {
+   "bazis": "ZZ",
+   "delay_us": 200,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "01": 428,
+    "11": 552,
+    "00": 722,
+    "10": 346
+   },
+   "E": 0.244140625
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "010": 469,
+    "011": 501,
+    "000": 524,
+    "001": 460,
+    "110": 27,
+    "100": 16,
+    "111": 24,
+    "101": 27
+   },
+   "siker": 0.9541015625
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "001": 481,
+    "010": 515,
+    "011": 441,
+    "000": 516,
+    "100": 24,
+    "111": 26,
+    "110": 21,
+    "101": 24
+   },
+   "siker": 0.95361328125
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "011": 455,
+    "010": 490,
+    "000": 541,
+    "001": 452,
+    "100": 32,
+    "101": 28,
+    "111": 26,
+    "110": 24
+   },
+   "siker": 0.9462890625
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "100": 28,
+    "010": 488,
+    "000": 477,
+    "011": 514,
+    "001": 474,
+    "101": 19,
+    "111": 15,
+    "110": 33
+   },
+   "siker": 0.95361328125
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "001": 473,
+    "011": 496,
+    "000": 491,
+    "100": 47,
+    "010": 449,
+    "111": 39,
+    "110": 28,
+    "101": 25
+   },
+   "siker": 0.93212890625
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "111": 38,
+    "010": 490,
+    "000": 466,
+    "011": 477,
+    "001": 467,
+    "110": 39,
+    "101": 28,
+    "100": 43
+   },
+   "siker": 0.927734375
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "110": 483,
+    "000": 493,
+    "001": 519,
+    "011": 23,
+    "111": 475,
+    "010": 20,
+    "100": 19,
+    "101": 16
+   },
+   "siker": 0.51513671875
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "111": 469,
+    "001": 463,
+    "110": 508,
+    "000": 513,
+    "101": 20,
+    "011": 24,
+    "010": 25,
+    "100": 26
+   },
+   "siker": 0.50048828125
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "111": 477,
+    "000": 476,
+    "101": 483,
+    "010": 515,
+    "100": 33,
+    "011": 20,
+    "001": 17,
+    "110": 27
+   },
+   "siker": 0.501953125
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "010": 491,
+    "000": 478,
+    "101": 484,
+    "111": 500,
+    "011": 17,
+    "100": 28,
+    "110": 27,
+    "001": 23
+   },
+   "siker": 0.49267578125
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "011": 471,
+    "101": 447,
+    "000": 468,
+    "110": 504,
+    "111": 28,
+    "100": 48,
+    "010": 42,
+    "001": 40
+   },
+   "siker": 0.49853515625
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "000": 516,
+    "101": 456,
+    "011": 429,
+    "100": 49,
+    "110": 495,
+    "111": 30,
+    "001": 37,
+    "010": 36
+   },
+   "siker": 0.4970703125
+  }
+ ]
+}

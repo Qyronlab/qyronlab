@@ -1,0 +1,45 @@
+{
+ "host": "zynko",
+ "keygen": {
+  "max_ms": 4.2886,
+  "median_ms": 0.4272,
+  "min_ms": 0.2483,
+  "n": 2000,
+  "p10_ms": 0.4073,
+  "p90_ms": 0.4659
+ },
+ "loadavg_after": [
+  15.568359375,
+  18.919921875,
+  22.5927734375
+ ],
+ "loadavg_before": [
+  15.57666015625,
+  19.03662109375,
+  22.669921875
+ ],
+ "n": 2000,
+ "pid": 268159,
+ "public_key_bytes": 1952,
+ "python": "3.12.3",
+ "raw_file": "z5_mldsa65_n2000_raw_v2_run2.json",
+ "raw_sha256": "5a2f180c28f808aa19c307b778f95c98c2f7ef8314ac23a0766eab0e2cca9651",
+ "scheme": "ml-dsa-65",
+ "sign": {
+  "max_ms": 32.6598,
+  "median_ms": 1.5363,
+  "min_ms": 0.5871,
+  "n": 2000,
+  "p10_ms": 0.6807,
+  "p90_ms": 4.4863
+ },
+ "signature_bytes": 3309,
+ "verify": {
+  "max_ms": 3.4263,
+  "median_ms": 0.3587,
+  "min_ms": 0.2874,
+  "n": 2000,
+  "p10_ms": 0.3388,
+  "p90_ms": 0.3719
+ }
+}

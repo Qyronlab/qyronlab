@@ -1,0 +1,80 @@
+{
+ "note": "POST HOC - not in the sealed plan; diagnostics of the K7 miss, no re-scoring",
+ "pearson_all": 0.3563,
+ "pearson_without_gt5sd_outliers": 0.3589,
+ "n_rest": 148,
+ "sd_p1_r0": 0.02478,
+ "sd_p1_r1": 0.01844,
+ "binomial_sd": 0.00781,
+ "mean_p1_r0": 0.5054,
+ "mean_p1_r1": 0.50572,
+ "outliers_gt5sd [q, p1_r0, p1_r1, ro_r0, ro_r1]": [
+  [
+   27,
+   0.5417,
+   0.5166,
+   0.0151,
+   0.0073
+  ],
+  [
+   45,
+   0.5952,
+   0.4858,
+   0.0444,
+   0.0303
+  ],
+  [
+   63,
+   0.5444,
+   0.5149,
+   0.0415,
+   0.0337
+  ],
+  [
+   68,
+   0.5215,
+   0.5481,
+   0.0059,
+   0.0044
+  ],
+  [
+   72,
+   0.2769,
+   0.5142,
+   0.3345,
+   0.312
+  ],
+  [
+   102,
+   0.4548,
+   0.4661,
+   0.1182,
+   0.103
+  ],
+  [
+   148,
+   0.3997,
+   0.3279,
+   0.2314,
+   0.2808
+  ],
+  [
+   152,
+   0.5217,
+   0.5474,
+   0.0049,
+   0.0078
+  ]
+ ],
+ "readout_error_changed": {
+  "pearson_ro_r0_r1": 0.9544,
+  "median_ro_r0": 0.01,
+  "median_ro_r1": 0.0105,
+  "calib_last_update_r0": "2026-10-28 18:28:07+01:00",
+  "calib_last_update_r1": "2026-10-31 09:35:16+01:00"
+ },
+ "delta_p1_vs_delta_ro_pearson": -0.1223,
+ "sign_agreement_of_bias": 0.7179,
+ "r_expected_was": 0.9006,
+ "r_min_sealed": 0.651
+}

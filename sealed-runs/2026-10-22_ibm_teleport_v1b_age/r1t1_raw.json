@@ -1,0 +1,811 @@
+{
+ "gep": "ibm_kingston",
+ "harmas": [
+  31,
+  32,
+  33
+ ],
+ "job": "dbd4nrk24mrc73ckobi0",
+ "loves": 2048,
+ "kalibracio_sha256": "d52fce8bf44d7d01018fede8da9b3344b07d41f9d996c890a310d8e519c5ddfc",
+ "sorok": [
+  {
+   "bemenet": "-",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "counts": {
+    "111": 361,
+    "001": 123,
+    "000": 409,
+    "011": 119,
+    "010": 407,
+    "101": 401,
+    "110": 124,
+    "100": 104
+   },
+   "siker": 0.5166015625,
+   "siker_postselect": 0.797270955165692
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "counts": {
+    "000": 383,
+    "010": 395,
+    "101": 404,
+    "100": 137,
+    "111": 372,
+    "110": 111,
+    "011": 131,
+    "001": 115
+   },
+   "siker": 0.5,
+   "siker_postselect": 0.7365384615384616
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 25,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "011": 484,
+    "001": 405,
+    "000": 475,
+    "010": 424,
+    "100": 76,
+    "111": 64,
+    "101": 59,
+    "110": 61
+   },
+   "siker": 0.873046875,
+   "siker_postselect": 0.8620689655172413
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 150,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "010": 382,
+    "001": 285,
+    "011": 329,
+    "000": 324,
+    "101": 165,
+    "111": 159,
+    "110": 207,
+    "100": 197
+   },
+   "siker": 0.64453125,
+   "siker_postselect": 0.6218809980806143
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 300,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "011": 283,
+    "010": 337,
+    "101": 196,
+    "111": 189,
+    "001": 266,
+    "100": 225,
+    "000": 353,
+    "110": 199
+   },
+   "siker": 0.60498046875,
+   "siker_postselect": 0.610726643598616
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 300,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "101": 207,
+    "110": 205,
+    "011": 295,
+    "001": 317,
+    "100": 207,
+    "010": 318,
+    "000": 295,
+    "111": 204
+   },
+   "siker": 0.59814453125,
+   "siker_postselect": 0.5876494023904383
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 480,
+    "010": 476,
+    "011": 477,
+    "000": 527,
+    "110": 19,
+    "101": 24,
+    "111": 25,
+    "100": 20
+   },
+   "siker": 0.95703125,
+   "siker_postselect": 0.9634369287020109
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 50,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "100": 104,
+    "001": 390,
+    "011": 395,
+    "010": 436,
+    "000": 417,
+    "110": 110,
+    "101": 110,
+    "111": 86
+   },
+   "siker": 0.7998046875,
+   "siker_postselect": 0.800383877159309
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 50,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 421,
+    "010": 372,
+    "100": 101,
+    "000": 396,
+    "011": 408,
+    "101": 125,
+    "111": 113,
+    "110": 112
+   },
+   "siker": 0.77978515625,
+   "siker_postselect": 0.7967806841046278
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 150,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "011": 381,
+    "010": 370,
+    "110": 161,
+    "000": 373,
+    "001": 333,
+    "101": 124,
+    "100": 156,
+    "111": 150
+   },
+   "siker": 0.71142578125,
+   "siker_postselect": 0.7051039697542533
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 25,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "000": 444,
+    "010": 447,
+    "110": 69,
+    "100": 76,
+    "011": 426,
+    "001": 432,
+    "111": 80,
+    "101": 74
+   },
+   "siker": 0.85400390625,
+   "siker_postselect": 0.8538461538461538
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 50,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "011": 448,
+    "010": 439,
+    "111": 69,
+    "000": 388,
+    "100": 90,
+    "001": 440,
+    "110": 83,
+    "101": 91
+   },
+   "siker": 0.83740234375,
+   "siker_postselect": 0.8117154811715481
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 150,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "011": 336,
+    "001": 352,
+    "010": 331,
+    "000": 367,
+    "101": 160,
+    "110": 182,
+    "111": 154,
+    "100": 166
+   },
+   "siker": 0.6767578125,
+   "siker_postselect": 0.6885553470919324
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "010": 495,
+    "011": 497,
+    "000": 505,
+    "001": 430,
+    "101": 33,
+    "100": 29,
+    "110": 20,
+    "111": 39
+   },
+   "siker": 0.94091796875,
+   "siker_postselect": 0.9456928838951311
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 465,
+    "000": 509,
+    "011": 498,
+    "101": 27,
+    "110": 41,
+    "010": 443,
+    "100": 31,
+    "111": 34
+   },
+   "siker": 0.93505859375,
+   "siker_postselect": 0.9425925925925925
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 150,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "010": 309,
+    "111": 165,
+    "001": 377,
+    "011": 305,
+    "101": 175,
+    "000": 376,
+    "110": 177,
+    "100": 164
+   },
+   "siker": 0.66748046875,
+   "siker_postselect": 0.6962962962962963
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 300,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 312,
+    "000": 320,
+    "011": 330,
+    "111": 187,
+    "010": 297,
+    "100": 189,
+    "110": 194,
+    "101": 219
+   },
+   "siker": 0.61474609375,
+   "siker_postselect": 0.6286836935166994
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 300,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "000": 306,
+    "100": 214,
+    "110": 206,
+    "010": 316,
+    "011": 303,
+    "001": 305,
+    "101": 201,
+    "111": 197
+   },
+   "siker": 0.6005859375,
+   "siker_postselect": 0.5884615384615385
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 150,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "110": 131,
+    "011": 380,
+    "010": 392,
+    "000": 338,
+    "101": 122,
+    "001": 379,
+    "100": 165,
+    "111": 141
+   },
+   "siker": 0.72705078125,
+   "siker_postselect": 0.6719681908548708
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 412,
+    "100": 119,
+    "011": 378,
+    "010": 433,
+    "101": 129,
+    "000": 364,
+    "110": 106,
+    "111": 107
+   },
+   "siker": 0.77490234375,
+   "siker_postselect": 0.7536231884057971
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 50,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "100": 101,
+    "000": 471,
+    "001": 379,
+    "011": 428,
+    "010": 424,
+    "111": 73,
+    "110": 83,
+    "101": 89
+   },
+   "siker": 0.8310546875,
+   "siker_postselect": 0.8234265734265734
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "010": 501,
+    "000": 477,
+    "011": 473,
+    "001": 465,
+    "110": 34,
+    "101": 33,
+    "100": 33,
+    "111": 32
+   },
+   "siker": 0.935546875,
+   "siker_postselect": 0.9352941176470588
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 150,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "111": 145,
+    "000": 334,
+    "001": 350,
+    "101": 165,
+    "110": 143,
+    "011": 355,
+    "010": 370,
+    "100": 186
+   },
+   "siker": 0.68798828125,
+   "siker_postselect": 0.6423076923076924
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 300,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "010": 353,
+    "101": 209,
+    "111": 191,
+    "011": 353,
+    "110": 242,
+    "001": 216,
+    "000": 245,
+    "100": 239
+   },
+   "siker": 0.56982421875,
+   "siker_postselect": 0.506198347107438
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "100": 169,
+    "111": 122,
+    "011": 344,
+    "000": 360,
+    "010": 402,
+    "001": 365,
+    "101": 138,
+    "110": 148
+   },
+   "siker": 0.71826171875,
+   "siker_postselect": 0.6805293005671077
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "100": 126,
+    "001": 385,
+    "000": 416,
+    "011": 366,
+    "101": 115,
+    "110": 133,
+    "010": 409,
+    "111": 98
+   },
+   "siker": 0.76953125,
+   "siker_postselect": 0.7675276752767528
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "counts": {
+    "000": 382,
+    "110": 377,
+    "101": 379,
+    "010": 145,
+    "100": 143,
+    "011": 362,
+    "111": 129,
+    "001": 131
+   },
+   "siker": 0.498046875,
+   "siker_postselect": 0.7276190476190476
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "000": 356,
+    "101": 134,
+    "110": 119,
+    "001": 427,
+    "011": 410,
+    "010": 382,
+    "100": 115,
+    "111": 105
+   },
+   "siker": 0.76904296875,
+   "siker_postselect": 0.7558386411889597
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 25,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "000": 459,
+    "010": 394,
+    "111": 58,
+    "101": 54,
+    "011": 502,
+    "001": 453,
+    "100": 65,
+    "110": 63
+   },
+   "siker": 0.8828125,
+   "siker_postselect": 0.8759541984732825
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 300,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "011": 244,
+    "111": 208,
+    "110": 183,
+    "000": 400,
+    "001": 342,
+    "100": 202,
+    "010": 242,
+    "101": 227
+   },
+   "siker": 0.599609375,
+   "siker_postselect": 0.6644518272425249
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 25,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "110": 83,
+    "000": 425,
+    "101": 74,
+    "111": 74,
+    "011": 455,
+    "010": 432,
+    "100": 85,
+    "001": 420
+   },
+   "siker": 0.845703125,
+   "siker_postselect": 0.8333333333333334
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "counts": {
+    "000": 415,
+    "010": 121,
+    "011": 375,
+    "111": 106,
+    "101": 392,
+    "110": 395,
+    "001": 116,
+    "100": 128
+   },
+   "siker": 0.50146484375,
+   "siker_postselect": 0.7642725598526704
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 25,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "000": 442,
+    "001": 460,
+    "010": 442,
+    "011": 462,
+    "100": 70,
+    "101": 60,
+    "110": 61,
+    "111": 51
+   },
+   "siker": 0.8818359375,
+   "siker_postselect": 0.86328125
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "011": 516,
+    "001": 522,
+    "000": 449,
+    "010": 469,
+    "110": 23,
+    "100": 27,
+    "111": 18,
+    "101": 24
+   },
+   "siker": 0.955078125,
+   "siker_postselect": 0.9432773109243697
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "counts": {
+    "001": 362,
+    "110": 337,
+    "011": 172,
+    "111": 369,
+    "000": 396,
+    "010": 158,
+    "100": 123,
+    "101": 131
+   },
+   "siker": 0.53125,
+   "siker_postselect": 0.7630057803468208
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 50,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "000": 424,
+    "001": 432,
+    "011": 433,
+    "110": 106,
+    "010": 394,
+    "100": 88,
+    "101": 84,
+    "111": 87
+   },
+   "siker": 0.82177734375,
+   "siker_postselect": 0.828125
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 50,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 420,
+    "000": 465,
+    "101": 80,
+    "011": 388,
+    "010": 436,
+    "111": 79,
+    "110": 88,
+    "100": 92
+   },
+   "siker": 0.83447265625,
+   "siker_postselect": 0.8348294434470377
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "011": 553,
+    "010": 453,
+    "001": 463,
+    "000": 464,
+    "110": 38,
+    "100": 39,
+    "111": 16,
+    "101": 22
+   },
+   "siker": 0.94384765625,
+   "siker_postselect": 0.9224652087475149
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 25,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 454,
+    "011": 383,
+    "010": 487,
+    "000": 476,
+    "101": 70,
+    "111": 51,
+    "100": 60,
+    "110": 67
+   },
+   "siker": 0.87890625,
+   "siker_postselect": 0.8880597014925373
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "101": 149,
+    "100": 159,
+    "011": 318,
+    "001": 413,
+    "000": 352,
+    "010": 344,
+    "111": 166,
+    "110": 147
+   },
+   "siker": 0.69677734375,
+   "siker_postselect": 0.6888454011741683
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "counts": {
+    "010": 147,
+    "000": 358,
+    "110": 398,
+    "011": 141,
+    "101": 166,
+    "111": 343,
+    "001": 354,
+    "100": 141
+   },
+   "siker": 0.48828125,
+   "siker_postselect": 0.717434869739479
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 100,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "010": 377,
+    "000": 402,
+    "101": 146,
+    "100": 113,
+    "011": 413,
+    "110": 95,
+    "001": 375,
+    "111": 127
+   },
+   "siker": 0.76513671875,
+   "siker_postselect": 0.7805825242718447
+  }
+ ]
+}

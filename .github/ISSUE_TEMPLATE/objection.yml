@@ -1,0 +1,25 @@
+name: Objection (ELLENVETÉS)
+description: You think a claim is wrong or unsupported. Say why, with a source or a recipe.
+title: "[objection] #<claim number>: "
+labels: ["objection"]
+body:
+  - type: input
+    id: target
+    attributes:
+      label: Claim issue number
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What is wrong, specifically
+      description: A missing control, a wrong number, a definition that does not match the data. Not "I doubt it".
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source or recipe
+      description: How the room can check your objection without trusting you.
+    validations:
+      required: true

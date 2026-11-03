@@ -1,0 +1,195 @@
+{
+ "v": 4,
+ "written_utc": "2026-11-03T03:51:18Z",
+ "backend": "ibm_fez",
+ "jobs": [
+  "E",
+  "F"
+ ],
+ "trigger": "run only after the vendor's calibration last_update is NEWER than the r3 one (2026-11-02 19:20:09+01:00); the live value before E and after F is recorded",
+ "circuit": "H on every qubit, measure every qubit into c[i]; optimization_level 0; initial layout = identity; E and F submitted back to back",
+ "shots": 4096,
+ "options": {
+  "dynamical_decoupling": false,
+  "twirling_gates": false,
+  "twirling_measure": false
+ },
+ "packing": "per shot c0..c(n-1), c0 = rightmost char; shots concatenated in returned order; MSB-first; partial byte dropped",
+ "h_design": 6.0,
+ "source_id": {
+  "E": "ibm_fez_H_all_qubits_r4E",
+  "F": "ibm_fez_H_all_qubits_r4F"
+ },
+ "channel_rule": {
+  "channels": 156,
+  "h_bit": 0.5,
+  "policy": "exclude",
+  "r_min": 0.622,
+  "z_mean_max": 1.5,
+  "z_ch_max": 4.0,
+  "basis": "r2 floor 0.622 (expected 0.87 within one calibration minus 0.25); z gate from the 3 November counterexample (same calibration mean |z| 0.76-0.92)"
+ },
+ "priors": {
+  "P1_r3CD": {
+   "file": "prior_r3CD.json",
+   "sha256": "cac9191ea24fb03d906dd76407306d7db61413348af7884dc77a14ad0d9717e6",
+   "reference": "r3CD",
+   "built_from": [
+    "052cf5bd2899e04e4f277c4b4240a3c040e5a795c8e6542dbb49c905bdf1628f",
+    "37ce4a8e68aa60b8875323195fefbcdec97746f4586c25b8c5d0499bddda639c"
+   ],
+   "bits_per_channel": 8192,
+   "age": "1 recalibration back"
+  },
+  "P2_r2AB": {
+   "file": "prior_r2AB.json",
+   "sha256": "1496d3e8ded6cf45b55599a0ef308bb2c10e81d8fd5c5f51774ff1d0b851e76e",
+   "reference": "r2AB",
+   "built_from": [
+    "75fe62d10403ac34e0e80898c79a6e93d6404b5ba35a7885111adee79ac53575",
+    "c7668976986688ac0bc5c9b20fb1793889f56aaec0f39ba8f37d118e6a8109c7"
+   ],
+   "bits_per_channel": 8192,
+   "age": "2 back"
+  },
+  "P3_r0": {
+   "file": "prior_r0.json",
+   "sha256": "193ee27cf9b6f20557cdbbc1ef225b9a055a0364473a978838a11d47cb24d0f2",
+   "reference": "r0",
+   "built_from": [
+    "01edd075ee7df7baf87df1a76300c7243b44e393040f12cc69577c91f19e7ba1"
+   ],
+   "bits_per_channel": 4096,
+   "age": "same state, 5 days, 4+ back"
+  },
+  "P4_r1": {
+   "file": "prior_r1.json",
+   "sha256": "b4cc321025fe229a4c41f4c0239fc878ddeb0846205a732fe3170cc9c8085a26",
+   "reference": "r1",
+   "built_from": [
+    "bf4cd6045f281366dc2d9dd4bf843c28a05a85d1047921800bb29cff2f13d9ef"
+   ],
+   "bits_per_channel": 4096,
+   "age": "the other state"
+  }
+ },
+ "chosen": "BEFORE the run: the four earlier runs as four priors of increasing age; each goes through the validated gate on E, none is picked by fit",
+ "arms_on_E": {
+  "none": "module without prior",
+  "P1_r3CD": "--prior prior_r3CD.json --prior-mode validated --prior-r-min 0.622",
+  "P2_r2AB": "--prior prior_r2AB.json --prior-mode validated --prior-r-min 0.622",
+  "P3_r0": "--prior prior_r0.json --prior-mode validated --prior-r-min 0.622",
+  "P4_r1": "--prior prior_r1.json --prior-mode validated --prior-r-min 0.622"
+ },
+ "software": {
+  "qrng_modul.py_sha256": "7320c72b809894a6b5540dd23a9d6be8dbc3a098ed848fbc8b0f239f2a9405f3",
+  "qrng_fuggetlen.py_sha256": "97d665d19b149b1475be74d354f1732c64bfcb235995b4f585eb1cef47b1eecd",
+  "qrng_prior.py_sha256": "c12ee3194937c61552fc35a2194a2519fac3c075ab0e5285a5bd631a4617d7a5",
+  "where": "tools/qrng of the public repo (with the compatibility z gate of 3 November)"
+ },
+ "numbers_from": {
+  "file": "terv_szamok_r4.json",
+  "sha256": "6b96243413d3242e5ee0281479e7ee8594401f885fa0ef1c956af2722c90d75c",
+  "raw_sha256": {
+   "r0": "01edd075ee7df7baf87df1a76300c7243b44e393040f12cc69577c91f19e7ba1",
+   "r1": "bf4cd6045f281366dc2d9dd4bf843c28a05a85d1047921800bb29cff2f13d9ef",
+   "r2A": "75fe62d10403ac34e0e80898c79a6e93d6404b5ba35a7885111adee79ac53575",
+   "r2B": "c7668976986688ac0bc5c9b20fb1793889f56aaec0f39ba8f37d118e6a8109c7",
+   "r3C": "052cf5bd2899e04e4f277c4b4240a3c040e5a795c8e6542dbb49c905bdf1628f",
+   "r3D": "37ce4a8e68aa60b8875323195fefbcdec97746f4586c25b8c5d0499bddda639c"
+  }
+ },
+ "predictions": {
+  "per_job (E and F)": {
+   "K1": "module accepts",
+   "K2": {
+    "h_mcv_range": [
+     6.5,
+     8.0
+    ]
+   },
+   "K3": {
+    "ones_fraction_range": [
+     0.4,
+     0.6
+    ]
+   },
+   "K4": "checker PASS (--expect-rows 1; --prior where cited)",
+   "K5": {
+    "excluded_channels_range": [
+     0,
+     4
+    ]
+   },
+   "K6": {
+    "h_acc_range": [
+     6.731,
+     8.0
+    ]
+   }
+  },
+  "K-S1": {
+   "claim": "known state: max over {r0, r1, r2AB, r3CD} of r(E, ref) >= 0.622",
+   "predicted": true,
+   "basis": "three recalibrations seen, every one landed in a state already seen"
+  },
+  "K-S2": {
+   "claim": "the latest state persists: r(E, r3CD) >= 0.622",
+   "predicted": true,
+   "basis": "r2->r3 returned to the same state; r0/r2/r3 are one state, r1 the other"
+  },
+  "K-S3": {
+   "claim": "stable in itself: r(E, F) >= 0.622",
+   "predicted": true,
+   "basis": "r2 0.907, r3 0.919"
+  },
+  "K-V": {
+   "claim": "validated gate decision per prior on E",
+   "predicted_used": {
+    "P1_r3CD": true,
+    "P2_r2AB": true,
+    "P3_r0": true,
+    "P4_r1": false
+   },
+   "basis": "dry runs on r3C above (P1 stand-in = r2AB)"
+  },
+  "K-V5": {
+   "claim": "every used prior: h_acc_val >= h_acc_none, out_val >= out_none, coverage of F >= cov_min",
+   "cov_min": 0.859,
+   "predicted": true
+  },
+  "K-V6": {
+   "claim": "among used priors the gain does not grow with age: gain(P1) >= gain(P2) >= gain(P3)",
+   "predicted": true,
+   "basis": "dry gains: {'P1_r3CD': 0.209964, 'P2_r2AB': 0.209964, 'P3_r0': 0.148159, 'P4_r1': 0.0}"
+  }
+ },
+ "thresholds": {
+  "K2": [
+   6.5,
+   8.0
+  ],
+  "K3": [
+   0.4,
+   0.6
+  ],
+  "K5": [
+   0,
+   4
+  ],
+  "K6": [
+   6.731,
+   8.0
+  ],
+  "r_min": 0.622,
+  "cov_min": 0.859,
+  "predicted_used": {
+   "P1_r3CD": true,
+   "P2_r2AB": true,
+   "P3_r0": true,
+   "P4_r1": false
+  }
+ },
+ "scoring": "K-S3, K-V5 are scored only if last_update is the same before E and after F (otherwise UNMEASURED). K-V1..4 = the gate decision per prior equals the prediction. K-V6 is scored over the priors actually used. Nothing is re-scored after the data.",
+ "interpretation": "Q1: a third state would refute K-S1 (and K-S2); a return to the r1 state would refute K-S2 only. Q2: how far back a validated prior reaches, and whether its value decays with age. Statistics still cannot certify quantumness; receipts say 'statistical'."
+}

@@ -1,0 +1,39 @@
+{
+ "host": "zynko",
+ "n": 100,
+ "pid": 3204776,
+ "python": "3.12.3",
+ "schemes": {
+  "ed25519": {
+   "keygen_ms_median": 0.081,
+   "public_key_bytes": 32,
+   "sign_ms_median": 0.0707,
+   "signature_bytes": 64,
+   "verify_ms_median": 0.2195
+  },
+  "ml-dsa-65": {
+   "keygen_ms_median": 0.4331,
+   "public_key_bytes": 1952,
+   "sign_ms_median": 2.4252,
+   "signature_bytes": 3309,
+   "verify_ms_median": 0.3623
+  },
+  "sphincs+-sha2-128s": {
+   "keygen_ms_median": 380.0448,
+   "public_key_bytes": 32,
+   "sign_ms_median": 2683.3315,
+   "signature_bytes": 7856,
+   "verify_ms_median": 2.6437
+  }
+ },
+ "seal_size": {
+  "ed25519+ml-dsa-65": {
+   "attestations": 2,
+   "canonical_bytes": 7195
+  },
+  "ed25519+ml-dsa-65+sphincs+-sha2-128s": {
+   "attestations": 3,
+   "canonical_bytes": 23141
+  }
+ }
+}

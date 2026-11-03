@@ -1,0 +1,262 @@
+{
+ "source": {
+  "r0": {
+   "raw": "2026-10-28_ibm_qrng_r0/raw.bin",
+   "raw_sha256": "01edd075ee7df7baf87df1a76300c7243b44e393040f12cc69577c91f19e7ba1",
+   "bytes": 79872
+  },
+  "r1": {
+   "raw": "2026-10-31_ibm_qrng_r1/raw.bin",
+   "raw_sha256": "bf4cd6045f281366dc2d9dd4bf843c28a05a85d1047921800bb29cff2f13d9ef",
+   "bytes": 79872
+  },
+  "r2A": {
+   "raw": "2026-11-02_ibm_qrng_r2/A/raw.bin",
+   "raw_sha256": "75fe62d10403ac34e0e80898c79a6e93d6404b5ba35a7885111adee79ac53575",
+   "bytes": 79872
+  },
+  "r2B": {
+   "raw": "2026-11-02_ibm_qrng_r2/B/raw.bin",
+   "raw_sha256": "c7668976986688ac0bc5c9b20fb1793889f56aaec0f39ba8f37d118e6a8109c7",
+   "bytes": 79872
+  },
+  "r3C": {
+   "raw": "2026-11-02_ibm_qrng_r3/C/raw.bin",
+   "raw_sha256": "052cf5bd2899e04e4f277c4b4240a3c040e5a795c8e6542dbb49c905bdf1628f",
+   "bytes": 79872
+  },
+  "r3D": {
+   "raw": "2026-11-02_ibm_qrng_r3/D/raw.bin",
+   "raw_sha256": "37ce4a8e68aa60b8875323195fefbcdec97746f4586c25b8c5d0499bddda639c",
+   "bytes": 79872
+  }
+ },
+ "rule": {
+  "H_ch": 0.5,
+  "policy": "exclude",
+  "shots": 4096,
+  "channels": 156,
+  "r_min": 0.622,
+  "z_mean_max": 1.5,
+  "z_ch_max": 4.0,
+  "basis": "r2 floor 0.622 (expected 0.87 within one calibration minus 0.25); z gate from the 3 November counterexample (same calibration mean |z| 0.76-0.92)"
+ },
+ "references": {
+  "r0": "r0 raw",
+  "r1": "r1 raw",
+  "r2AB": "r2 A+B pooled (8192 bits/channel)",
+  "r3CD": "r3 C+D pooled (8192 bits/channel)"
+ },
+ "priors": {
+  "P1_r3CD": {
+   "reference": "r3CD",
+   "bits_per_channel": 8192,
+   "age": "1 recalibration back"
+  },
+  "P2_r2AB": {
+   "reference": "r2AB",
+   "bits_per_channel": 8192,
+   "age": "2 back"
+  },
+  "P3_r0": {
+   "reference": "r0",
+   "bits_per_channel": 4096,
+   "age": "same state, 5 days, 4+ back"
+  },
+  "P4_r1": {
+   "reference": "r1",
+   "bits_per_channel": 4096,
+   "age": "the other state"
+  }
+ },
+ "gate_on_history": {
+  "r2A->r2B": {
+   "r": 0.9071,
+   "z_mean": 0.8354,
+   "z_max": 3.4031,
+   "used": true,
+   "channels_combined": 156
+  },
+  "r3C->r3D": {
+   "r": 0.9187,
+   "z_mean": 0.7639,
+   "z_max": 3.0721,
+   "used": true,
+   "channels_combined": 156
+  },
+  "r2AB->r3C": {
+   "r": 0.9134,
+   "z_mean": 0.9171,
+   "z_max": 3.2152,
+   "used": true,
+   "channels_combined": 156
+  },
+  "r2AB->r3D": {
+   "r": 0.9185,
+   "z_mean": 0.8803,
+   "z_max": 3.4626,
+   "used": true,
+   "channels_combined": 156
+  },
+  "r0->r3CD": {
+   "r": 0.8164,
+   "z_mean": 1.111,
+   "z_max": 10.0599,
+   "used": true,
+   "channels_combined": 153
+  },
+  "r0->r2AB": {
+   "r": 0.8599,
+   "z_mean": 0.9792,
+   "z_max": 9.1342,
+   "used": true,
+   "channels_combined": 153
+  },
+  "r1->r3CD": {
+   "r": 0.4882,
+   "z_mean": 1.0245,
+   "z_max": 28.409,
+   "used": false,
+   "channels_combined": 155
+  },
+  "r1->r2AB": {
+   "r": 0.4943,
+   "z_mean": 1.0848,
+   "z_max": 28.2886,
+   "used": false,
+   "channels_combined": 155
+  },
+  "r0->r1": {
+   "r": 0.3563,
+   "z_mean": 1.0932,
+   "z_max": 21.9633,
+   "used": false,
+   "channels_combined": 153
+  }
+ },
+ "dry_runs_on_r3C": {
+  "P1_r3CD": {
+   "note": "stand-in: r2AB on r3C (one recalibration back at the time)",
+   "r": 0.9134,
+   "z_mean": 0.9171,
+   "z_max": 3.2152,
+   "used": true,
+   "channels_combined": 156,
+   "none_h_acc": 7.257674,
+   "validated_h_acc": 7.467638,
+   "gain": 0.209964,
+   "out_bytes": 37024,
+   "coverage_of_r3D": 0.9231
+  },
+  "P2_r2AB": {
+   "note": "r2AB on r3C",
+   "r": 0.9134,
+   "z_mean": 0.9171,
+   "z_max": 3.2152,
+   "used": true,
+   "channels_combined": 156,
+   "none_h_acc": 7.257674,
+   "validated_h_acc": 7.467638,
+   "gain": 0.209964,
+   "out_bytes": 37024,
+   "coverage_of_r3D": 0.9231
+  },
+  "P3_r0": {
+   "note": "r0 on r3C",
+   "r": 0.7931,
+   "z_mean": 1.0681,
+   "z_max": 8.8331,
+   "used": true,
+   "channels_combined": 154,
+   "none_h_acc": 7.257674,
+   "validated_h_acc": 7.405833,
+   "gain": 0.148159,
+   "out_bytes": 36512,
+   "coverage_of_r3D": 0.9487
+  },
+  "P4_r1": {
+   "note": "r1 on r3C",
+   "r": 0.4646,
+   "z_mean": 0.9977,
+   "z_max": 24.9672,
+   "used": false,
+   "channels_combined": 155,
+   "none_h_acc": 7.257674,
+   "validated_h_acc": 7.257674,
+   "gain": 0.0,
+   "out_bytes": 35968,
+   "coverage_of_r3D": 0.9872
+  }
+ },
+ "coverage_model": {
+  "n_mc": 2000,
+  "seed": 20261104,
+  "cov_1pct_quantile": 0.859,
+  "cov_median": 0.9167
+ },
+ "predictions_r4": {
+  "per_job (E and F)": {
+   "K1": "module accepts",
+   "K2": {
+    "h_mcv_range": [
+     6.5,
+     8.0
+    ]
+   },
+   "K3": {
+    "ones_fraction_range": [
+     0.4,
+     0.6
+    ]
+   },
+   "K4": "checker PASS (--expect-rows 1; --prior where cited)",
+   "K5": {
+    "excluded_channels_range": [
+     0,
+     4
+    ]
+   },
+   "K6": {
+    "h_acc_range": [
+     6.731,
+     8.0
+    ]
+   }
+  },
+  "K-S1": {
+   "claim": "known state: max over {r0, r1, r2AB, r3CD} of r(E, ref) >= 0.622",
+   "predicted": true,
+   "basis": "three recalibrations seen, every one landed in a state already seen"
+  },
+  "K-S2": {
+   "claim": "the latest state persists: r(E, r3CD) >= 0.622",
+   "predicted": true,
+   "basis": "r2->r3 returned to the same state; r0/r2/r3 are one state, r1 the other"
+  },
+  "K-S3": {
+   "claim": "stable in itself: r(E, F) >= 0.622",
+   "predicted": true,
+   "basis": "r2 0.907, r3 0.919"
+  },
+  "K-V": {
+   "claim": "validated gate decision per prior on E",
+   "predicted_used": {
+    "P1_r3CD": true,
+    "P2_r2AB": true,
+    "P3_r0": true,
+    "P4_r1": false
+   },
+   "basis": "dry runs on r3C above (P1 stand-in = r2AB)"
+  },
+  "K-V5": {
+   "claim": "every used prior: h_acc_val >= h_acc_none, out_val >= out_none, coverage of F >= cov_min",
+   "cov_min": 0.859,
+   "predicted": true
+  },
+  "K-V6": {
+   "claim": "among used priors the gain does not grow with age: gain(P1) >= gain(P2) >= gain(P3)",
+   "predicted": true,
+   "basis": "dry gains: {'P1_r3CD': 0.209964, 'P2_r2AB': 0.209964, 'P3_r0': 0.148159, 'P4_r1': 0.0}"
+  }
+ }
+}

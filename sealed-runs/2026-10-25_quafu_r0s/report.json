@@ -1,0 +1,45 @@
+{
+ "test": "Bell pair at zero wait, Quafu Shenglian, pairs (34,40) and (61,68); two runs of the same sealed plan",
+ "sealed_plan_sha256": "15a9f2890cca07f06ecb2428665d0850f03fea03ac93f46d08d053a3da35e00f",
+ "counts_sha256": "74565e563d3c6a485c60d151d6a653746e59b82512729c1b5f5738c80030edd4",
+ "K1": true,
+ "K2": true,
+ "K3": true,
+ "K4": true,
+ "ok": false,
+ "note": "K1-K4 as sealed passed in run 1 on both pairs (run 2: K2 failed on pair 1), but the per-qubit readout correction of the sealed evaluator produced correlations above 1 (unphysical) - the sealed result is NOT accepted. Entanglement is visible without any correction (raw F 0.79-0.83). The pairwise 4x4 readout correction (post hoc, bootstrap 500) gives the F_mert values below; it was not part of the sealed plan.",
+ "sorok": [
+  {
+   "t": 0,
+   "F_mert": 0.9623,
+   "F_jos": 0.993,
+   "run": "run1",
+   "pair": "0",
+   "F_raw": 0.7856
+  },
+  {
+   "t": 1,
+   "F_mert": 0.9766,
+   "F_jos": 0.9723,
+   "run": "run1",
+   "pair": "1",
+   "F_raw": 0.8249
+  },
+  {
+   "t": 2,
+   "F_mert": 0.971,
+   "F_jos": 0.993,
+   "run": "run2",
+   "pair": "0",
+   "F_raw": 0.7933
+  },
+  {
+   "t": 3,
+   "F_mert": 0.9911,
+   "F_jos": 0.9723,
+   "run": "run2",
+   "pair": "1",
+   "F_raw": 0.8324
+  }
+ ]
+}

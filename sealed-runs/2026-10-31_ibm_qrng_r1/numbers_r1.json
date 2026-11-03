@@ -1,0 +1,264 @@
+{
+ "source": {
+  "raw": "joslatok/2026-10-28_ibm_qrng_r0/raw.bin",
+  "raw_sha256": "01edd075ee7df7baf87df1a76300c7243b44e393040f12cc69577c91f19e7ba1",
+  "raw_bytes": 79872,
+  "kalibracio": "joslatok/2026-10-28_ibm_qrng_r0/kalibracio.json",
+  "kalibracio_sha256": "aaebfe6affcdd2bfdf61b40c269d22d3e967b17dab0ed2407ca55215f99abe5e",
+  "shots": 4096,
+  "qubits": 156
+ },
+ "r0_channels": {
+  "p1_min": 0.276855,
+  "p1_max": 0.595215,
+  "p1_median": 0.50708,
+  "p1_sd": 0.024776,
+  "binomial_sd": 0.007812,
+  "dev_gt_3sd": 16,
+  "dev_gt_10sd": [
+   45,
+   72,
+   148
+  ],
+  "unexplained_by_vendor_readout": [
+   [
+    27,
+    0.5417,
+    0.0151
+   ],
+   [
+    45,
+    0.5952,
+    0.0444
+   ],
+   [
+    63,
+    0.5444,
+    0.0415
+   ],
+   [
+    72,
+    0.2769,
+    0.3345
+   ],
+   [
+    73,
+    0.5276,
+    0.0059
+   ],
+   [
+    103,
+    0.5354,
+    0.0156
+   ],
+   [
+    142,
+    0.5371,
+    0.0034
+   ],
+   [
+    143,
+    0.5283,
+    0.0063
+   ]
+  ]
+ },
+ "margin_99pct_at_N": {
+  "4096": 0.020125,
+  "8192": 0.014231,
+  "16384": 0.010063
+ },
+ "grid_failing_channels": {
+  "H0.5_N4096": {
+   "failing": 1,
+   "qubits": [
+    72
+   ]
+  },
+  "H0.5_N8192": {
+   "failing": 1,
+   "qubits": [
+    72
+   ]
+  },
+  "H0.5_N16384": {
+   "failing": 1,
+   "qubits": [
+    72
+   ]
+  },
+  "H0.6_N4096": {
+   "failing": 1,
+   "qubits": [
+    72
+   ]
+  },
+  "H0.6_N8192": {
+   "failing": 1,
+   "qubits": [
+    72
+   ]
+  },
+  "H0.6_N16384": {
+   "failing": 1,
+   "qubits": [
+    72
+   ]
+  },
+  "H0.7_N4096": {
+   "failing": 2,
+   "qubits": [
+    72,
+    148
+   ]
+  },
+  "H0.7_N8192": {
+   "failing": 1,
+   "qubits": [
+    72
+   ]
+  },
+  "H0.7_N16384": {
+   "failing": 1,
+   "qubits": [
+    72
+   ]
+  },
+  "H0.8_N4096": {
+   "failing": 3,
+   "qubits": [
+    45,
+    72,
+    148
+   ]
+  },
+  "H0.8_N8192": {
+   "failing": 3,
+   "qubits": [
+    45,
+    72,
+    148
+   ]
+  },
+  "H0.8_N16384": {
+   "failing": 3,
+   "qubits": [
+    45,
+    72,
+    148
+   ]
+  },
+  "H0.9_N4096": {
+   "failing": 40,
+   "qubits": [
+    5,
+    7,
+    17,
+    18,
+    20,
+    21,
+    27,
+    29,
+    30,
+    31,
+    34,
+    39
+   ]
+  },
+  "H0.9_N8192": {
+   "failing": 22,
+   "qubits": [
+    5,
+    20,
+    27,
+    31,
+    41,
+    45,
+    63,
+    72,
+    73,
+    75,
+    76,
+    102
+   ]
+  },
+  "H0.9_N16384": {
+   "failing": 12,
+   "qubits": [
+    5,
+    27,
+    45,
+    63,
+    72,
+    73,
+    102,
+    103,
+    137,
+    142,
+    143,
+    148
+   ]
+  }
+ },
+ "rule_r1": {
+  "H_ch": 0.5,
+  "max_p_broken": 0.707107,
+  "policy": "exclude",
+  "shots": 4096,
+  "why": "0.9 at 4096 shots fails 40/156 healthy-but-biased qubits (margin 0.020 alone costs 0.057 bit) = false red; 0.5 names a channel broken only when max(p0,p1) exceeds 0.707 after the 99 % margin - on r0 that is exactly the qubit whose vendor readout error (0.33) explains it; biased-but-usable channels are charged in the accounting instead"
+ },
+ "r0_under_rule_r1": {
+  "excluded": [
+   [
+    72,
+    0.2769,
+    0.4322,
+    0.3345
+   ]
+  ],
+  "h_mcv": 7.519128,
+  "h_acc": 7.230826,
+  "h_eff": 7.230826,
+  "samples_per_chunk": 71,
+  "out_bytes": 35968
+ },
+ "stability": {
+  "var_bias": 0.000552839,
+  "var_noise": 6.1035e-05,
+  "r_expected_if_device_property": 0.9006
+ },
+ "predictions_r1": {
+  "K1": "module ACCEPTS the block under policy exclude (health tests 0 failures, h_mcv >= 6.0, |lag1| <= 5/sqrt(N), no replay)",
+  "K2": {
+   "h_mcv_range": [
+    6.5,
+    8.0
+   ]
+  },
+  "K3": {
+   "ones_fraction_range": [
+    0.4,
+    0.6
+   ]
+  },
+  "K4": "buyer checker (qrng_fuggetlen) PASS, accounting and exclusion recomputed",
+  "K5": {
+   "excluded_channels_range": [
+    0,
+    4
+   ],
+   "basis": "r0 under the same rule excludes 1 ([72]); a second run on the same machine at most a handful - more than 4 = the rule or the machine changed"
+  },
+  "K6": {
+   "h_acc_range": [
+    6.731,
+    8.0
+   ],
+   "basis": "r0 h_acc 7.231; the accounting may drop by the drift of a few channels, not by half a bit per sample"
+  },
+  "K7": {
+   "pearson_r_p1_r0_vs_r1_min": 0.651,
+   "basis": "expected r 0.901 if the per-qubit bias is a device property (var_bias/(var_bias+var_noise)); 0.25 margin for calibration drift between the runs; r below the minimum = the bias pattern is NOT stable = the guard finding on q45 was a one-off"
+  }
+ }
+}

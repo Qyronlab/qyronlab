@@ -1,0 +1,398 @@
+{
+ "gep": "ibm_kingston",
+ "harmas": [
+  31,
+  32,
+  33
+ ],
+ "job": "dbcoffni0auc73940ii0",
+ "loves": 2048,
+ "kalibracio_sha256": "e4cbc6abba97a49b95ed2e53932180bf9b970eca9af283b6f9e0bf934d582c46",
+ "ido_vege": "20261022T035018Z",
+ "sorok": [
+  {
+   "bazis": "XX",
+   "delay_us": 0,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "01": 28,
+    "00": 970,
+    "11": 998,
+    "10": 52
+   },
+   "E": 0.921875
+  },
+  {
+   "bazis": "YY",
+   "delay_us": 0,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "01": 925,
+    "10": 1013,
+    "11": 41,
+    "00": 69
+   },
+   "E": -0.892578125
+  },
+  {
+   "bazis": "ZZ",
+   "delay_us": 0,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "00": 987,
+    "11": 987,
+    "10": 52,
+    "01": 22
+   },
+   "E": 0.927734375
+  },
+  {
+   "bazis": "XX",
+   "delay_us": 50,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "00": 861,
+    "11": 857,
+    "10": 175,
+    "01": 155
+   },
+   "E": 0.677734375
+  },
+  {
+   "bazis": "YY",
+   "delay_us": 50,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "11": 169,
+    "01": 805,
+    "00": 180,
+    "10": 894
+   },
+   "E": -0.6591796875
+  },
+  {
+   "bazis": "ZZ",
+   "delay_us": 50,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "10": 239,
+    "11": 836,
+    "00": 805,
+    "01": 168
+   },
+   "E": 0.6025390625
+  },
+  {
+   "bazis": "XX",
+   "delay_us": 100,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "01": 192,
+    "11": 824,
+    "00": 758,
+    "10": 274
+   },
+   "E": 0.544921875
+  },
+  {
+   "bazis": "YY",
+   "delay_us": 100,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "10": 782,
+    "01": 785,
+    "00": 242,
+    "11": 239
+   },
+   "E": -0.5302734375
+  },
+  {
+   "bazis": "ZZ",
+   "delay_us": 100,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "11": 682,
+    "10": 362,
+    "00": 721,
+    "01": 283
+   },
+   "E": 0.3701171875
+  },
+  {
+   "bazis": "XX",
+   "delay_us": 200,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "11": 650,
+    "10": 359,
+    "00": 693,
+    "01": 346
+   },
+   "E": 0.3115234375
+  },
+  {
+   "bazis": "YY",
+   "delay_us": 200,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "10": 726,
+    "01": 639,
+    "00": 388,
+    "11": 295
+   },
+   "E": -0.3330078125
+  },
+  {
+   "bazis": "ZZ",
+   "delay_us": 200,
+   "visszhang": true,
+   "resz": "rce",
+   "counts": {
+    "01": 388,
+    "00": 744,
+    "11": 470,
+    "10": 446
+   },
+   "E": 0.185546875
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "000": 473,
+    "010": 437,
+    "100": 48,
+    "001": 544,
+    "011": 472,
+    "110": 16,
+    "101": 41,
+    "111": 17
+   },
+   "siker": 0.9404296875
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "001": 497,
+    "000": 478,
+    "011": 464,
+    "101": 33,
+    "010": 490,
+    "100": 48,
+    "110": 19,
+    "111": 19
+   },
+   "siker": 0.94189453125
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "000": 517,
+    "001": 517,
+    "011": 454,
+    "010": 469,
+    "100": 24,
+    "101": 31,
+    "111": 15,
+    "110": 21
+   },
+   "siker": 0.95556640625
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "000": 506,
+    "011": 498,
+    "010": 466,
+    "001": 497,
+    "101": 20,
+    "111": 16,
+    "100": 23,
+    "110": 22
+   },
+   "siker": 0.96044921875
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "000": 436,
+    "001": 504,
+    "010": 491,
+    "011": 468,
+    "101": 46,
+    "111": 41,
+    "100": 32,
+    "110": 30
+   },
+   "siker": 0.92724609375
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": true,
+   "resz": "r0",
+   "counts": {
+    "010": 494,
+    "000": 462,
+    "011": 466,
+    "101": 50,
+    "001": 492,
+    "110": 23,
+    "100": 36,
+    "111": 25
+   },
+   "siker": 0.9345703125
+  },
+  {
+   "bemenet": "0",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "111": 444,
+    "001": 524,
+    "000": 464,
+    "110": 498,
+    "100": 33,
+    "101": 39,
+    "010": 19,
+    "011": 27
+   },
+   "siker": 0.5048828125
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "111": 482,
+    "110": 529,
+    "000": 484,
+    "001": 442,
+    "101": 30,
+    "100": 32,
+    "011": 24,
+    "010": 25
+   },
+   "siker": 0.47607421875
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "001": 20,
+    "101": 492,
+    "010": 508,
+    "111": 460,
+    "000": 508,
+    "011": 25,
+    "100": 17,
+    "110": 18
+   },
+   "siker": 0.51806640625
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "000": 528,
+    "111": 499,
+    "101": 492,
+    "010": 439,
+    "001": 22,
+    "011": 20,
+    "110": 26,
+    "100": 22
+   },
+   "siker": 0.49267578125
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "011": 487,
+    "110": 480,
+    "000": 471,
+    "101": 474,
+    "100": 43,
+    "001": 46,
+    "111": 24,
+    "010": 23
+   },
+   "siker": 0.50146484375
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 0,
+   "visszhang": true,
+   "dinamikus": true,
+   "korrekcio": false,
+   "resz": "r0",
+   "counts": {
+    "000": 453,
+    "110": 494,
+    "011": 477,
+    "101": 487,
+    "001": 41,
+    "010": 30,
+    "111": 38,
+    "100": 28
+   },
+   "siker": 0.48876953125
+  }
+ ]
+}

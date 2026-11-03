@@ -1,0 +1,22 @@
+{
+ "v": 1,
+ "written_utc": "2026-10-28T18:10:54Z",
+ "backend": "ibm_fez",
+ "circuit": "H on every qubit, measure every qubit into c[i]; optimization_level 0; initial layout = identity",
+ "shots": 4096,
+ "options": {
+  "dynamical_decoupling": false,
+  "twirling_gates": false,
+  "twirling_measure": false
+ },
+ "packing": "per shot c0..c(n-1), c0 = rightmost char; shots concatenated in returned order; MSB-first; partial byte dropped",
+ "h_design": 6.0,
+ "source_id": "ibm_fez_H_all_qubits_r0",
+ "predictions": {
+  "K1": "qrng_modul accepts the block (all health tests pass, min-entropy estimate >= 6.0, |lag1| <= 5/sqrt(N), no replay)",
+  "K2": "min-entropy estimate h_mcv in [6.5, 8.0] bits per 8-bit sample",
+  "K3": "fraction of ones over all bits in [0.40, 0.60] (readout asymmetry and T1 pull toward 0 allowed)",
+  "K4": "qrng_fuggetlen PASS on the resulting ledger"
+ },
+ "interpretation": "K1-K4 pass = the reference module software runs on a real quantum source end to end. It does NOT certify quantumness (statistics cannot); the receipt stays 'statistical'. A failure is reported as measured."
+}

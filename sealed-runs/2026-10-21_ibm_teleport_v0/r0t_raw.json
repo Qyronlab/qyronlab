@@ -1,0 +1,127 @@
+{
+ "gep": "ibm_kingston",
+ "harmas": [
+  31,
+  32,
+  33
+ ],
+ "job": "dbcejehgv2cc73ea6tv0",
+ "loves": 2048,
+ "kalibracio_sha256": "8cb7514216211f209ee3493747f40427309779990a8dcde25bd322026b519f08",
+ "sorok": [
+  {
+   "bemenet": "0",
+   "delay_us": 0,
+   "visszhang": false,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 541,
+    "010": 439,
+    "011": 491,
+    "000": 466,
+    "101": 28,
+    "100": 30,
+    "111": 23,
+    "110": 30
+   },
+   "siker": 0.94580078125,
+   "siker_postselect": 0.9395161290322581
+  },
+  {
+   "bemenet": "1",
+   "delay_us": 0,
+   "visszhang": false,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "010": 455,
+    "011": 485,
+    "000": 504,
+    "001": 462,
+    "110": 28,
+    "111": 35,
+    "101": 40,
+    "100": 39
+   },
+   "siker": 0.9306640625,
+   "siker_postselect": 0.9281767955801105
+  },
+  {
+   "bemenet": "+",
+   "delay_us": 0,
+   "visszhang": false,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 500,
+    "100": 31,
+    "000": 486,
+    "010": 467,
+    "011": 445,
+    "101": 54,
+    "110": 26,
+    "111": 39
+   },
+   "siker": 0.9267578125,
+   "siker_postselect": 0.9400386847195358
+  },
+  {
+   "bemenet": "-",
+   "delay_us": 0,
+   "visszhang": false,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "011": 499,
+    "001": 493,
+    "000": 501,
+    "010": 424,
+    "101": 34,
+    "100": 33,
+    "110": 30,
+    "111": 34
+   },
+   "siker": 0.93603515625,
+   "siker_postselect": 0.9382022471910112
+  },
+  {
+   "bemenet": "+i",
+   "delay_us": 0,
+   "visszhang": false,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "001": 419,
+    "010": 459,
+    "011": 493,
+    "000": 503,
+    "100": 46,
+    "111": 52,
+    "101": 50,
+    "110": 26
+   },
+   "siker": 0.9150390625,
+   "siker_postselect": 0.9162112932604736
+  },
+  {
+   "bemenet": "-i",
+   "delay_us": 0,
+   "visszhang": false,
+   "dinamikus": true,
+   "korrekcio": true,
+   "counts": {
+    "100": 40,
+    "010": 441,
+    "000": 477,
+    "001": 474,
+    "011": 467,
+    "111": 56,
+    "101": 56,
+    "110": 37
+   },
+   "siker": 0.90771484375,
+   "siker_postselect": 0.9226305609284333
+  }
+ ]
+}

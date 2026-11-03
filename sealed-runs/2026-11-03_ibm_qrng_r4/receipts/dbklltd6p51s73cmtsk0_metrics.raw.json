@@ -1,0 +1,1 @@
+{"caller":"qiskit_ibm_runtime~sampler.py","qiskit_version":"qiskit_ibm_runtime-0.50.0,qiskit-2.6.0*","timestamps":{"created":"2026-11-03T03:54:29.626764Z","finished":"2026-11-03T03:54:36.872208Z","running":"2026-11-03T03:54:30.782462Z"},"bss":{"seconds":3},"usage":{"quantum_seconds":3,"seconds":3,"status":"complete"}}

@@ -1,0 +1,142 @@
+{
+ "test": "QRNG reference module, fourth sealed run (r3) on ibm_fez after a recalibration: Q1 does the bias pattern return; Q2 does a pre-chosen prior help the buyer",
+ "sealed_plan_sha256": "72e659f9dc1afcdb280c2070eb887e15454c73bfe8124bd8bae08b910234380f",
+ "raw_sha256_C": "052cf5bd2899e04e4f277c4b4240a3c040e5a795c8e6542dbb49c905bdf1628f",
+ "raw_sha256_D": "37ce4a8e68aa60b8875323195fefbcdec97746f4586c25b8c5d0499bddda639c",
+ "K1_C": true,
+ "K2_C": true,
+ "K3_C": true,
+ "K4_C": true,
+ "K5_C": true,
+ "K6_C": true,
+ "K1_D": true,
+ "K2_D": true,
+ "K3_D": true,
+ "K4_D": true,
+ "K5_D": true,
+ "K6_D": true,
+ "K_R1": true,
+ "K_R2": true,
+ "K_P1": true,
+ "K_P2": true,
+ "K_P3": null,
+ "same_calibration": true,
+ "calib_last_update_before_C": "2026-11-02 19:20:09+01:00",
+ "calib_last_update_after_D": "2026-11-02 19:20:09+01:00",
+ "r2_last_update": "2026-11-02 18:51:34+01:00",
+ "pearson": {
+  "C_r0": 0.793118,
+  "C_r1": 0.464579,
+  "C_r2AB": 0.913392,
+  "C_D": 0.91872,
+  "D_r0": 0.806528,
+  "D_r1": 0.492498,
+  "D_r2AB": 0.918458
+ },
+ "best_state": "r2AB",
+ "branch": "return",
+ "arms_C": {
+  "none": {
+   "accepted": true,
+   "h_mcv": 7.617825,
+   "ones_fraction": 0.503204,
+   "excluded": [
+    72
+   ],
+   "h_acc": 7.257674,
+   "h_eff": 7.257674,
+   "out_bytes": 35968,
+   "checker": "PASS",
+   "checker_rc": 0,
+   "prior": null,
+   "lag1": 0.002187
+  },
+  "validated": {
+   "accepted": true,
+   "h_mcv": 7.617825,
+   "ones_fraction": 0.503204,
+   "excluded": [
+    72
+   ],
+   "h_acc": 7.467638,
+   "h_eff": 7.467638,
+   "out_bytes": 37024,
+   "checker": "PASS",
+   "checker_rc": 0,
+   "prior": {
+    "bits_per_channel": 8192,
+    "mode": "validated",
+    "predicted_failing": [
+     72
+    ],
+    "r": 0.913392,
+    "r_min": 0.622,
+    "sha256": "1496d3e8ded6cf45b55599a0ef308bb2c10e81d8fd5c5f51774ff1d0b851e76e",
+    "source": "r2 A+B (2026-11-02)",
+    "used": true
+   },
+   "lag1": 0.002187
+  },
+  "blind": {
+   "accepted": true,
+   "h_mcv": 7.617825,
+   "ones_fraction": 0.503204,
+   "excluded": [
+    72
+   ],
+   "h_acc": 7.467638,
+   "h_eff": 7.467638,
+   "out_bytes": 37024,
+   "checker": "PASS",
+   "checker_rc": 0,
+   "prior": {
+    "bits_per_channel": 8192,
+    "mode": "blind",
+    "predicted_failing": [
+     72
+    ],
+    "r": 0.913392,
+    "r_min": 0.622,
+    "sha256": "1496d3e8ded6cf45b55599a0ef308bb2c10e81d8fd5c5f51774ff1d0b851e76e",
+    "source": "r2 A+B (2026-11-02)",
+    "used": true
+   },
+   "lag1": 0.002187
+  }
+ },
+ "D_none": {
+  "accepted": true,
+  "h_mcv": 7.584145,
+  "ones_fraction": 0.503349,
+  "excluded": [
+   72
+  ],
+  "h_acc": 7.252934,
+  "h_eff": 7.252934,
+  "out_bytes": 35968,
+  "checker": "PASS",
+  "checker_rc": 0,
+  "prior": null,
+  "lag1": -0.00483
+ },
+ "coverage_of_D": {
+  "none": 0.9872,
+  "validated": 0.9231,
+  "blind": 0.9231,
+  "cov_min": 0.8654
+ },
+ "rmse": {
+  "prior_vs_C": 0.010925,
+  "half_vs_C": 0.02671
+ },
+ "certification": "statistical",
+ "sorok": [
+  {
+   "t": 0,
+   "F_mert": 0.913392,
+   "F_jos": 0.622
+  }
+ ],
+ "full_evaluation": "evaluation.json",
+ "ok": true
+}

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expiring message — Qyronlab</title>
+<meta name="description" content="A message that cannot be copied and expires: an entangled pair's measured decay, a sealed model, and receipts your browser checks itself.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F6F2;--text:#1F2328;--muted:#5B6169;--accent:#0F6E6E;--line:#DCDAD3;--soft:#EFEDE7;--bad:#8A3B2E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171A;--text:#E8E6E1;--muted:#A3A8AE;--accent:#3FA7A3;--line:#2C3136;--soft:#1C2024;--bad:#D08A7C}}
+:root[data-theme="dark"]{--bg:#14171A;--text:#E8E6E1;--muted:#A3A8AE;--accent:#3FA7A3;--line:#2C3136;--soft:#1C2024;--bad:#D08A7C}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 "IBM Plex Sans",Inter,system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 16px 80px}
+h1,h2{font-family:"IBM Plex Serif","Source Serif 4",Georgia,serif;font-weight:400;line-height:1.25}
+h1{font-size:2.1rem;margin:0 0 .4em}h2{font-size:1.35rem;margin:2.2em 0 .5em}
+p{margin:.6em 0}.muted{color:var(--muted)}.mono,code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em}
+.tag{display:inline-block;font:12px/1 "IBM Plex Mono",monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:5px 7px;margin-right:6px}
+figure{margin:18px 0 6px}svg{width:100%;height:auto;display:block}
+.controls{display:grid;grid-template-columns:1fr auto;gap:12px 18px;align-items:center;margin:14px 0}
+input[type=range],input[type=radio]{accent-color:var(--accent)}input[type=range]{width:100%}
+.modes label{margin-right:14px;cursor:pointer}
+.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 4px}
+.card{border:1px solid var(--line);padding:10px 12px}.card b{display:block;font:400 1.3rem/1.2 "IBM Plex Mono",monospace}
+.card span{font-size:.82rem;color:var(--muted)}
+button{font:500 15px/1 "IBM Plex Sans",sans-serif;background:transparent;color:var(--accent);border:1px solid var(--accent);padding:10px 14px;margin:6px 8px 6px 0;cursor:pointer}
+button.primary{background:var(--accent);color:var(--bg)}button:disabled{opacity:.4;cursor:default}
+.verdict{border-left:3px solid var(--accent);padding:8px 12px;margin:10px 0;background:var(--soft)}
+.verdict.no{border-left-color:var(--bad)}
+pre{background:var(--soft);border:1px solid var(--line);padding:10px;overflow-x:auto;font:12.5px/1.45 "IBM Plex Mono",monospace;white-space:pre-wrap;word-break:break-all}
+ol.ledger{font:12.5px/1.5 "IBM Plex Mono",monospace;padding-left:22px}
+table{border-collapse:collapse;width:100%;font-size:.92rem}td,th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left}
+@media (max-width:560px){.readout{grid-template-columns:1fr}.controls{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<span class="tag">measured</span><span class="tag">predicted</span><span class="tag">checked in your browser</span>
+<h1>A message that cannot be copied — and expires</h1>
+<p>On an ordinary message bus a message lasts forever and can be copied. A quantum network carries a different kind of
+message: an <em>entangled pair</em>. It cannot be copied, it can be used only once, and it loses quality while it waits.
+This page shows such a message with real data, and lets your browser check every claim itself.</p>
+
+<h2>1. How long does the pair stay good?</h2>
+<p class="muted">The points are <b>measured</b>: one entangled pair on IBM's <span class="mono">ibm_kingston</span> processor
+(qubits 32 and 33), 21 October 2026. The curves are the <b>prediction</b> — a model written down and sealed by its
+fingerprint <em>before</em> the measurement. With one echo pulse (teal) the pair lives about four times longer.</p>
+<figure><svg id="chart" viewBox="0 0 720 360" role="img" aria-label="Pair fidelity versus waiting time"></svg>
+<figcaption class="muted mono" style="font-size:12.5px">— predicted, sealed model (solid: with echo, dashed: raw) · ○ measured raw · ● measured with echo · grey band: 3σ margin</figcaption></figure>
+<div class="controls">
+  <div><label for="t">Waiting time: <span class="mono" id="tv"></span> µs</label><input id="t" type="range" min="0" max="800" step="1" value="120"></div>
+  <div class="modes"><label><input type="radio" name="mode" value="raw"> raw</label><label><input type="radio" name="mode" value="echo" checked> with echo</label></div>
+</div>
+<div class="readout">
+  <div class="card"><b id="fv">—</b><span>predicted pair fidelity F</span></div>
+  <div class="card"><b id="uv">—</b><span>usable if F − 3σ ≥ 0.5</span></div>
+  <div class="card"><b id="lv">—</b><span>lifetime in this mode</span></div>
+</div>
+<p class="muted">Above F = 0.5 the pair is still entangled, and sending a quantum state over it beats every classical
+method. The margin 3σ is the counting error of the measurement.</p>
+
+<h2>2. Send the message, then try to cheat</h2>
+<p>Each use of a pair produces a <b>receipt</b>: which pair, how long it waited, and whether it was still good. Every
+event also goes into a <b>ledger</b> whose rows are signed and chained. Both are signed twice — with today's Ed25519 and
+with the post-quantum ML-DSA-65 — by a key your browser has just made. The checker below trusts nothing the issuer
+says: it recomputes the fidelity from the sealed model and reads the ledger itself.</p>
+<button class="primary" id="use">Create a pair and use it after the waiting time</button>
+<button id="again" disabled>Use the same pair again</button>
+<button id="edit" disabled>Edit the waiting time in the receipt</button>
+<button id="cut" disabled>Delete a ledger row</button>
+<div id="verdicts"></div>
+<details><summary class="muted">The last receipt (signed bytes)</summary><pre id="rc">—</pre></details>
+<details><summary class="muted">The ledger</summary><ol class="ledger" id="ledger"></ol></details>
+
+<h2>3. What this is, and what it is not</h2>
+<table>
+<tr><th>Real</th><td>The measured points, the sealed model (it matched 9 of 11 raw points and 11 of 11 echo points within
+0.03), the rule, the signatures, the chained ledger and the checks — all run here, in your browser.</td></tr>
+<tr><th>Simulated</th><td>The pairs you create on this page: their quality comes from the sealed model, not from a new
+measurement.</td></tr>
+<tr><th>Limits</th><td>One processor, one pair, one day. The pair waits inside a chip, so it lives for microseconds; a
+network memory would live longer — the receipts and the ledger would stay the same, only the curve would change. The
+signing key is a throwaway key made in your browser.</td></tr>
+</table>
+<p class="muted" id="src"></p>
+</main>
+<script type="module">
+import { ed25519 } from "https://cdn.jsdelivr.net/npm/@noble/curves@2.4.0/ed25519.js/+esm";
+import { ml_dsa65 } from "https://cdn.jsdelivr.net/npm/@noble/post-quantum@0.7.1/ml-dsa.js/+esm";
+import { sha256 } from "https://cdn.jsdelivr.net/npm/@noble/hashes@2.4.0/sha2.js/+esm";
+import * as L from "./logic.mjs";
+const lib = { ed25519, ml_dsa65, sha256 };
+const data = await (await fetch("./data.json")).json();
+const $ = (id) => document.getElementById(id);
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const life = { raw: L.lifetime(data, "raw"), echo: L.lifetime(data, "echo") };
+const mode = () => document.querySelector("input[name=mode]:checked").value;
+const T = () => +$("t").value;
+
+function draw() {
+  const W = 720, H = 360, x0 = 52, x1 = 700, y0 = 320, y1 = 20, X = (t) => x0 + (x1 - x0) * t / 800, Y = (f) => y0 - (y0 - y1) * (f - 0.1) / 0.9;
+  const ln = css("--line"), mu = css("--muted"), ac = css("--accent"), tx = css("--text");
+  let s = "";
+  for (const f of [0.2, 0.4, 0.6, 0.8, 1.0]) s += `<line x1="${x0}" x2="${x1}" y1="${Y(f)}" y2="${Y(f)}" stroke="${ln}"/><text x="${x0 - 8}" y="${Y(f) + 4}" fill="${mu}" font-size="12" text-anchor="end" font-family="IBM Plex Mono">${f.toFixed(1)}</text>`;
+  for (const t of [0, 200, 400, 600, 800]) s += `<text x="${X(t)}" y="${y0 + 20}" fill="${mu}" font-size="12" text-anchor="middle" font-family="IBM Plex Mono">${t}</text>`;
+  s += `<text x="${x1}" y="${y0 + 38}" fill="${mu}" font-size="12" text-anchor="end">waiting time (µs)</text>`;
+  const thr = data.F_min + 3 * L.sigmaBound(data.shots_per_basis);
+  s += `<rect x="${x0}" y="${Y(thr)}" width="${x1 - x0}" height="${Y(data.F_min) - Y(thr)}" fill="${ln}" opacity=".6"/><line x1="${x0}" x2="${x1}" y1="${Y(0.5)}" y2="${Y(0.5)}" stroke="${mu}" stroke-dasharray="4 4"/><text x="${x1}" y="${Y(0.5) - 6}" fill="${mu}" font-size="12" text-anchor="end">F = 0.5 — entangled above</text>`;
+  for (const m of ["raw", "echo"]) {
+    let d = ""; for (let t = 0; t <= 800; t += 2) d += (t ? "L" : "M") + X(t).toFixed(1) + "," + Y(L.modelF(data.model, t)[m]).toFixed(1);
+    s += `<path d="${d}" fill="none" stroke="${m === "echo" ? ac : tx}" stroke-width="${m === mode() ? 2.4 : 1.2}" ${m === "raw" ? 'stroke-dasharray="6 4"' : ""} opacity="${m === mode() ? 1 : .55}"/>`;
+  }
+  for (const p of data.measured) {
+    s += `<circle cx="${X(p.t_us)}" cy="${Y(p.F_raw)}" r="4" fill="none" stroke="${tx}" stroke-width="1.4"/><circle cx="${X(p.t_us)}" cy="${Y(p.F_echo)}" r="4" fill="${ac}"/>`;
+  }
+  const f = L.modelF(data.model, T())[mode()];
+  s += `<line x1="${X(T())}" x2="${X(T())}" y1="${y1}" y2="${y0}" stroke="${ac}" stroke-width="1"/><circle cx="${X(T())}" cy="${Y(f)}" r="6" fill="none" stroke="${ac}" stroke-width="2"/>`;
+  $("chart").innerHTML = s;
+  const r = L.rule(data, mode(), T());
+  $("tv").textContent = T(); $("fv").textContent = r.F === null ? "—" : r.F.toFixed(3);
+  $("uv").textContent = r.usable ? "usable" : "expired"; $("lv").textContent = life[mode()] + " µs";
+}
+
+let bus = L.newBus(lib, data), last = null, lastPair = null, lastMode = null;
+function show(title, v) {
+  const d = document.createElement("div"); d.className = "verdict" + (v.verdict.startsWith("REFUSED") ? " no" : "");
+  d.innerHTML = `<b>${title}</b><br>${v.verdict}${v.why ? " — " + v.why : ""}`; $("verdicts").prepend(d);
+  $("ledger").innerHTML = bus.ledger.map((r) => `<li>${r.text.slice(r.text.indexOf("\n") + 1)}</li>`).join("");
+}
+$("use").onclick = () => {
+  lastMode = mode(); lastPair = bus.create(lastMode); last = bus.use(lastPair, lastMode, T());
+  $("rc").textContent = last.text + "\n\nsha256 " + last.sha256 + "\nEd25519 " + last.sig_ed25519.slice(0, 48) + "…\nML-DSA-65 " + last.sig_mldsa65.slice(0, 48) + "… (" + last.sig_mldsa65.length / 2 + " bytes)";
+  show(`${lastPair}, ${lastMode}, used after ${T()} µs`, L.verify(lib, data, bus.pub, bus.ledger, last));
+  for (const id of ["again", "edit", "cut"]) $(id).disabled = false;
+};
+$("again").onclick = () => { const r = bus.use(lastPair, lastMode, T()); show(`${lastPair} used a second time`, L.verify(lib, data, bus.pub, bus.ledger, r)); };
+$("edit").onclick = () => { const t2 = Math.max(0, T() - 60); const ed = { ...last, text: last.text.replace(/"wait_us":\d+(\.\d+)?/, `"wait_us":${t2}`) };
+  show(`receipt edited: wait changed to ${t2} µs`, L.verify(lib, data, bus.pub, bus.ledger, ed)); };
+$("cut").onclick = () => { const cut = bus.ledger.slice(0, 1).concat(bus.ledger.slice(2)); show("a ledger row deleted, the last receipt checked again", L.verify(lib, data, bus.pub, cut.length ? cut : bus.ledger, last)); };
+$("t").oninput = draw; for (const r of document.querySelectorAll("input[name=mode]")) r.onchange = draw;
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", draw);
+$("src").innerHTML = `Sources in this repository: sealed prediction <span class="mono">${data.sources.sealed_prediction.path}</span> (sha256 ${data.sources.sealed_prediction.sha256.slice(0, 16)}…), measured report <span class="mono">${data.sources.measured_report.path}</span> (sha256 ${data.sources.measured_report.sha256.slice(0, 16)}…).`;
+draw();
+if (location.hash === "#selftest") {                      // QA: click through every action and record the verdicts
+  const out = [];
+  const rec = () => out.push(document.querySelector("#verdicts .verdict").innerText.replace(/\s+/g, " "));
+  $("t").value = 120; document.querySelector("input[value=echo]").checked = true; draw();
+  $("use").click(); rec(); $("again").click(); rec(); $("edit").click(); rec(); $("cut").click(); rec();
+  $("t").value = 120; document.querySelector("input[value=raw]").checked = true; draw(); $("use").click(); rec();
+  const pre = document.createElement("pre"); pre.id = "selftest"; pre.textContent = out.join("\n") + "\nlifetimes raw " + life.raw + " echo " + life.echo;
+  document.querySelector("main").append(pre);
+}
+</script>
+</body>
+</html>

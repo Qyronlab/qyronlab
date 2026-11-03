@@ -1,0 +1,71 @@
+{
+ "test": "QRNG reference module, third sealed run (r2) on ibm_fez: two jobs minutes apart under one calibration; K7 = the per-qubit bias repeats within minutes",
+ "sealed_plan_sha256": "f631d095d5477037ed06df5f6193ecd2fc0166c057f4477a5ddcfa0293edef94",
+ "raw_sha256_A": "75fe62d10403ac34e0e80898c79a6e93d6404b5ba35a7885111adee79ac53575",
+ "K1_A": true,
+ "K2_A": true,
+ "K3_A": true,
+ "K4_A": true,
+ "K5_A": true,
+ "K6_A": true,
+ "raw_sha256_B": "c7668976986688ac0bc5c9b20fb1793889f56aaec0f39ba8f37d118e6a8109c7",
+ "K1_B": true,
+ "K2_B": true,
+ "K3_B": true,
+ "K4_B": true,
+ "K5_B": true,
+ "K6_B": true,
+ "K7": true,
+ "K8": false,
+ "K9": true,
+ "same_calibration": true,
+ "calib_last_update_before_A": "2026-11-02 18:51:34+01:00",
+ "calib_last_update_after_B": "2026-11-02 18:51:34+01:00",
+ "pearson": {
+  "AB": 0.907095,
+  "A_r1": 0.466299,
+  "A_r0": 0.849083,
+  "B_r1": 0.498599,
+  "B_r0": 0.830526,
+  "r0_r1": 0.356273,
+  "readout_r2_r1": 0.941608
+ },
+ "permutation_control_B21c": {
+  "seed": 20261102,
+  "n_perm": 10000,
+  "r_observed": 0.907095,
+  "n_perm_ge_obs": 0,
+  "p_one_sided": 0.0001,
+  "r_perm_max": 0.685698,
+  "r_perm_sd": 0.081463
+ },
+ "K7_min_r_sealed": 0.622,
+ "K7_expected_r": 0.872,
+ "h_mcv_A": 7.526204,
+ "h_mcv_B": 7.540466,
+ "h_acc_A": 7.251013,
+ "h_acc_B": 7.233233,
+ "excluded_A": [
+  72
+ ],
+ "excluded_B": [
+  72
+ ],
+ "ones_fraction_A": 0.50393,
+ "ones_fraction_B": 0.503826,
+ "out_bytes_A": 35968,
+ "out_bytes_B": 35968,
+ "sd_p1_A": 0.026025,
+ "sd_p1_B": 0.026735,
+ "binomial_sd": 0.007812,
+ "certification": "statistical",
+ "sorok": [
+  {
+   "t": 0,
+   "F_mert": 0.907095,
+   "F_jos": 0.622
+  }
+ ],
+ "full_evaluation": "report_teljes.json",
+ "ok": false
+}

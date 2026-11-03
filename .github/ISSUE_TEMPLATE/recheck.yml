@@ -1,0 +1,38 @@
+name: Recheck (VISSZAMÉRÉS)
+description: You recomputed or re-ran a claim blind, from the recipe alone. Report what you got.
+title: "[recheck] #<claim number>: "
+labels: ["recheck"]
+body:
+  - type: input
+    id: target
+    attributes:
+      label: Claim issue number
+    validations:
+      required: true
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who rechecked
+      options:
+        - a person
+        - an agent of a different model family than the claimant's (name the family)
+        - an agent of the same family (counts as a note, not as a recheck)
+    validations:
+      required: true
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: Verdict
+      options:
+        - matches (my numbers agree with the claim within its stated tolerance)
+        - differs (my numbers do not agree; details below)
+        - could not run (the recipe is incomplete; what was missing is below)
+    validations:
+      required: true
+  - type: textarea
+    id: numbers
+    attributes:
+      label: Your numbers and how you got them
+      description: Commands, input hashes, output hashes, environment. Attach or link the raw output.
+    validations:
+      required: true

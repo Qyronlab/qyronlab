@@ -1,0 +1,217 @@
+{
+ "_doc": "GitHub server-side PushEvent timestamps (GET /repos/{owner}/{repo}/events, fetched 2026-10-23T04:15Z with repository read access). created_at is set by GitHub, not by the pusher. Derived subset; the raw response is kept by the lab with the sha256 below. The Events API is best-effort: the push that carried the v1b fingerprint commit (ee6fda0, between 9c505a2 and a4cb90f) is absent from the listing, so no GitHub anchor exists for v1b.",
+ "raw_response_sha256": "062067fca0f622b51ba766d0739f3e3169205317a29dbc71ed88ff07f58f0017",
+ "raw_response_bytes": 32264,
+ "push_events": [
+  {
+   "created_at": "2026-10-21T15:06:00Z",
+   "before": "74165130d7b3f8ef5ac73be3dd048bb64d3c5158",
+   "head": "8dc6619edd863f5fdd3689321a609e58df8ae112",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T15:36:12Z",
+   "before": "8dc6619edd863f5fdd3689321a609e58df8ae112",
+   "head": "6c670f231e83b085210dc047ba5f6ccc9f61e38c",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T15:41:39Z",
+   "before": "6c670f231e83b085210dc047ba5f6ccc9f61e38c",
+   "head": "3252aee28a40a8ab41724e8e1758eb30ab26a85b",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T15:52:15Z",
+   "before": "3252aee28a40a8ab41724e8e1758eb30ab26a85b",
+   "head": "24a1c53e807a3ac4f8539e1de306e272c65ea8d4",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T16:11:35Z",
+   "before": "1ce04dadada481026bea995767e56c19c6f76365",
+   "head": "e12929c9d5ea56d95213a7d3b9300ff51a36c7f4",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T16:35:39Z",
+   "before": "e12929c9d5ea56d95213a7d3b9300ff51a36c7f4",
+   "head": "b35fb4fcd83714c867254e8b5f088688e6737ed2",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T16:59:02Z",
+   "before": "802edc0c94a1d224ef17e59ee4a7602978670890",
+   "head": "c844072928b51c373faaa3ad23e6a889a3dccd53",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T17:00:36Z",
+   "before": "c844072928b51c373faaa3ad23e6a889a3dccd53",
+   "head": "5dd17cf69a85154a67d52b837cf19aac217e910f",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T17:08:24Z",
+   "before": "5dd17cf69a85154a67d52b837cf19aac217e910f",
+   "head": "25f8e13dbf1c4d4d63fae2dc022183ee9b986973",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T17:10:03Z",
+   "before": "25f8e13dbf1c4d4d63fae2dc022183ee9b986973",
+   "head": "05e56253fb3775853f3b9a916f54e81b8b63be18",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T17:21:45Z",
+   "before": "4b40a7aa9ac75692e35bf7210044aac2599cc83d",
+   "head": "96441da0cf09309bb75fe729bf9b5cba76dfc81d",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-21T17:35:54Z",
+   "before": "96441da0cf09309bb75fe729bf9b5cba76dfc81d",
+   "head": "81edac347d50cb2e0362eaabff088bf913c8c79e",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T03:26:52Z",
+   "before": "81edac347d50cb2e0362eaabff088bf913c8c79e",
+   "head": "f2de1f5ea558ea78886cbf8c2c4132f92285a64a",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T03:31:31Z",
+   "before": "f2de1f5ea558ea78886cbf8c2c4132f92285a64a",
+   "head": "65fffeb8f36e744f2de6521de74016812dbe1c3a",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T03:34:59Z",
+   "before": "65fffeb8f36e744f2de6521de74016812dbe1c3a",
+   "head": "04f2cd2db65bfcb91fbfb19a63a7d02e03cf0e2a",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T03:35:58Z",
+   "before": "04f2cd2db65bfcb91fbfb19a63a7d02e03cf0e2a",
+   "head": "f67e5e0029f06d143d5fa25bcac0da2dd46976d9",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T03:43:35Z",
+   "before": "f67e5e0029f06d143d5fa25bcac0da2dd46976d9",
+   "head": "49a4c22b24d406782172275907840290e43b5492",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T03:51:07Z",
+   "before": "49a4c22b24d406782172275907840290e43b5492",
+   "head": "03ceca4cfcdb06224ea135fb226d97858e20a05e",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T03:55:15Z",
+   "before": "03ceca4cfcdb06224ea135fb226d97858e20a05e",
+   "head": "52dcd168660f4b014b771c25ec0f7fb675eedbb2",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T05:30:39Z",
+   "before": "52dcd168660f4b014b771c25ec0f7fb675eedbb2",
+   "head": "a2b9324f35480353269051fe78a991c6fe77550b",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T15:20:40Z",
+   "before": "a2b9324f35480353269051fe78a991c6fe77550b",
+   "head": "e523f94f110b6748011db0181eaa41335257019a",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T17:20:25Z",
+   "before": "c1934ba930207b0dda2dae974d4fc5d11f1f8430",
+   "head": "9c505a232ed17029b53fc42f86a93c2334edde68",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T17:56:55Z",
+   "before": "98e65f50abda0437d537d9bfbb7d57daba51a354",
+   "head": "4b03e14ea9d93da461defc1bdd3e2da7fa05fe57",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T17:57:15Z",
+   "before": "4b03e14ea9d93da461defc1bdd3e2da7fa05fe57",
+   "head": "b9263b96f15440b683ba7b9ed62f6d4d5fc7610f",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T17:57:44Z",
+   "before": "a4cb90f7401a1412c4e988ffeac2fae5bd2983d3",
+   "head": "98e65f50abda0437d537d9bfbb7d57daba51a354",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T18:28:12Z",
+   "before": "cb87dc23de87cc06235220c9f4547222de338247",
+   "head": "7747f969abbcdf5f3873f0b5b6557db3107db103",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T18:30:01Z",
+   "before": "7747f969abbcdf5f3873f0b5b6557db3107db103",
+   "head": "bd87dce23354292cf70da82c92954d3ee144e363",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  },
+  {
+   "created_at": "2026-10-22T18:44:40Z",
+   "before": "160643518e43b8273f284bc2468cbcf6fe246d0b",
+   "head": "d428dac77a30fa4c9db180979b7cd99007847937",
+   "ref": "refs/heads/main",
+   "repo": "Cairn-mesh/qyronlab"
+  }
+ ],
+ "anchors": {
+  "teleport_v1": {
+   "fingerprint_commit": "03ceca4cfcdb06224ea135fb226d97858e20a05e",
+   "github_push_created_at": "2026-10-22T03:51:07Z",
+   "provider_job": "dbcogek24mrc73ck2d00",
+   "provider_job_created": "2026-10-22T03:51:22.846111Z",
+   "order": "GitHub push (03:51:07Z) precedes provider job creation (03:51:22.846Z) by 15.8 s; two third-party clocks, neither the lab's"
+  },
+  "teleport_v1b": {
+   "fingerprint_commit": "ee6fda0",
+   "github_push_created_at": null,
+   "note": "push event absent from the Events API listing; GitHub anchor UNMEASURED"
+  }
+ }
+}

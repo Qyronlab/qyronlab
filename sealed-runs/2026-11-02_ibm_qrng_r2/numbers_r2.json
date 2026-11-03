@@ -1,0 +1,96 @@
+{
+ "source": {
+  "r0": {
+   "raw": "raw.bin",
+   "raw_sha256": "01edd075ee7df7baf87df1a76300c7243b44e393040f12cc69577c91f19e7ba1",
+   "raw_bytes": 79872,
+   "kalibracio_sha256": "aaebfe6affcdd2bfdf61b40c269d22d3e967b17dab0ed2407ca55215f99abe5e",
+   "shots": 4096,
+   "calib_last_update": "2026-10-28 18:28:07+01:00",
+   "sd_p1": 0.024776,
+   "sd_noise": 0.007812,
+   "var_bias": 0.0005528391641977977,
+   "excluded": [
+    72
+   ],
+   "h_acc": 7.230826,
+   "h_mcv": 7.519128
+  },
+  "r1": {
+   "raw": "raw.bin",
+   "raw_sha256": "bf4cd6045f281366dc2d9dd4bf843c28a05a85d1047921800bb29cff2f13d9ef",
+   "raw_bytes": 79872,
+   "kalibracio_sha256": "6a65a77d00acd7f6dbf1006bc6e9fa9317b5a06d8973150d75d10e5bd3141517",
+   "shots": 4096,
+   "calib_last_update": "2026-10-31 09:35:16+01:00",
+   "sd_p1": 0.018435,
+   "sd_noise": 0.007812,
+   "var_bias": 0.0002788305576501279,
+   "excluded": [],
+   "h_acc": 7.299763,
+   "h_mcv": 7.569433
+  }
+ },
+ "rule": {
+  "H_ch": 0.5,
+  "policy": "exclude",
+  "shots": 4096,
+  "channels": 156,
+  "max_p_broken": 0.707107,
+  "why": "the r1 rule unchanged: a channel is broken only when max(p0,p1) exceeds 0.707 after the 99 % margin; biased-but-usable channels are charged in the per-channel accounting"
+ },
+ "stability": {
+  "var_noise": 6.1035e-05,
+  "var_bias_r0": 0.000552839,
+  "var_bias_r1": 0.000278831,
+  "var_bias_pooled": 0.000415835,
+  "r_expected_minutes_apart_if_bias_constant": 0.872,
+  "r_observed_r0_r1_3_days": 0.3563,
+  "readout_table_r_r0_r1": 0.9544
+ },
+ "predictions_r2": {
+  "per_job": {
+   "K1": "module ACCEPTS the block under policy exclude (health tests 0 failures, h_mcv >= 6.0, |lag1| <= 5/sqrt(N), no replay)",
+   "K2": {
+    "h_mcv_range": [
+     6.5,
+     8.0
+    ]
+   },
+   "K3": {
+    "ones_fraction_range": [
+     0.4,
+     0.6
+    ]
+   },
+   "K4": "buyer checker (qrng_fuggetlen, --expect-rows 1) PASS, accounting and exclusion recomputed",
+   "K5": {
+    "excluded_channels_range": [
+     0,
+     4
+    ],
+    "basis": "r0 under the rule excludes 1, r1 0"
+   },
+   "K6": {
+    "h_acc_range": [
+     6.731,
+     8.0
+    ],
+    "basis": "r0 h_acc 7.231, r1 7.300; floor = min - 0.5 bit"
+   }
+  },
+  "K7": {
+   "pearson_r_p1_A_vs_B_min": 0.622,
+   "basis": "two jobs minutes apart under ONE vendor calibration; expected r 0.872 if the per-qubit bias is constant within a calibration (var_bias pooled over r0 and r1 / (var_bias + var_noise)); 0.25 margin as in r1; below the floor = the bias is not even stable over minutes = uncalibratable drift above shot noise",
+   "scored_only_if": "kalibracio last_update before job A == after job B; otherwise K7 and K8 are UNMEASURED (reported, not re-scored)"
+  },
+  "K8": {
+   "order": "r(A,B) > r(A,r1) > r(A,r0)",
+   "basis": "the bias correlation falls with calibration age (minutes, ~2 days, ~5 days); day-scale reference r(r0,r1) = 0.356"
+  },
+  "K9": {
+   "readout_table_r_r2_vs_r1_min": 0.9,
+   "basis": "the vendor's readout-error table was stable r0<->r1 (r 0.954); r2 (snapshot before A) vs r1"
+  }
+ }
+}

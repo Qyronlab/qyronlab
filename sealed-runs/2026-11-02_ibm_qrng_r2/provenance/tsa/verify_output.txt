@@ -1,0 +1,23 @@
+Status info:
+Status: Granted.
+Status description: unspecified
+Failure info: unspecified
+
+TST info:
+Version: 1
+Policy OID: tsa_policy1
+Hash Algorithm: sha256
+Message data:
+    0000 - f6 31 d0 95 d5 47 70 37-ed 06 df 5f 61 93 ec d2   .1...Gp7..._a...
+    0010 - fc 01 66 c0 57 f4 47 7a-5d dc fa 02 93 ed ef 94   ..f.W.Gz].......
+Serial number: 0x09A8E307
+Time stamp: Nov  2 18:02:34 2026 GMT
+Accuracy: unspecified
+Ordering: yes
+Nonce: unspecified
+TSA: DirName:/O=Free TSA/OU=TSA/description=This certificate digitally signs documents and time stamp requests made using the freetsa.org online services/CN=www.freetsa.org/emailAddress=busilezas@mailbox.org/L=Wuerzburg/C=DE/ST=Bayern
+Extensions:
+
+Verification: OK
+Using configuration from /usr/lib/ssl/openssl.cnf
+Warning: certificate from 'freetsa_tsa.crt' with subject '/O=Free TSA/OU=TSA/description=This certificate digitally signs documents and time stamp requests made using the freetsa.org online services/CN=www.freetsa.org/emailAddress=busilezas@mailbox.org/L=Wuerzburg/C=DE/ST=Bayern' is not a CA cert

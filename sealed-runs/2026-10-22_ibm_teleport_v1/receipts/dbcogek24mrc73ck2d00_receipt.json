@@ -1,0 +1,25 @@
+{
+ "job_id": "dbcogek24mrc73ck2d00",
+ "fetched": "2026-10-22T17:42:22Z",
+ "responses": {
+  "job": {
+   "http": 200,
+   "file": "dbcogek24mrc73ck2d00_job.raw.json",
+   "sha256": "bb91994aa0dac3586794ee60a7122147bfcacc7776ce2d24eed328b688f1a9b3",
+   "bytes": 88890
+  },
+  "metrics": {
+   "http": 200,
+   "file": "dbcogek24mrc73ck2d00_metrics.raw.json",
+   "sha256": "3288984bc31261b5add49d33672d7e25233fb4091701f9b5edcc0ba9fbdda500",
+   "bytes": 322
+  }
+ },
+ "created": "2026-10-22T03:51:22.846111Z",
+ "state": "Completed",
+ "timestamps": {
+  "created": "2026-10-22T03:51:22.846111Z",
+  "finished": "2026-10-22T03:52:42.692014Z",
+  "running": "2026-10-22T03:51:24.102215Z"
+ }
+}

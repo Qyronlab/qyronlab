@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vendor-number simulator — Qyronlab</title>
+<meta name="description" content="How would an entangled pair run today on a cloud quantum processor, judged only by the numbers its vendor publishes — and did those numbers predict what we measured?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F6F2;--text:#1F2328;--muted:#5B6169;--accent:#0F6E6E;--line:#DCDAD3;--soft:#EFEDE7;--bad:#8A3B2E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171A;--text:#E8E6E1;--muted:#A3A8AE;--accent:#3FA7A3;--line:#2C3136;--soft:#1C2024;--bad:#D08A7C}}
+:root[data-theme="dark"]{--bg:#14171A;--text:#E8E6E1;--muted:#A3A8AE;--accent:#3FA7A3;--line:#2C3136;--soft:#1C2024;--bad:#D08A7C}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 "IBM Plex Sans",Inter,system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 16px 80px}
+h1,h2{font-family:"IBM Plex Serif","Source Serif 4",Georgia,serif;font-weight:400;line-height:1.25}
+h1{font-size:2.1rem;margin:0 0 .4em}h2{font-size:1.35rem;margin:2.2em 0 .5em}
+p{margin:.6em 0}.muted{color:var(--muted)}.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.88em}
+.tag{display:inline-block;font:12px/1 "IBM Plex Mono",monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:5px 7px;margin-right:6px}
+select{font:15px "IBM Plex Mono",monospace;background:var(--bg);color:var(--text);border:1px solid var(--line);padding:8px;max-width:100%}
+.row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:12px 0}
+.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+.card{border:1px solid var(--line);padding:10px 12px}.card b{display:block;font:400 1.3rem/1.2 "IBM Plex Mono",monospace}.card span{font-size:.82rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:top}
+th{font-weight:500}td.num{font-family:"IBM Plex Mono",monospace;font-size:.85rem}
+.bad{color:var(--bad)}.good{color:var(--accent)}
+.wrap{overflow-x:auto}
+@media (max-width:560px){.readout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<span class="tag">vendor's numbers</span><span class="tag">our measurements</span><span class="tag">computed in your browser</span>
+<h1>How would an entangled pair run today?</h1>
+<p>Cloud quantum processors publish their calibration: how long each qubit keeps its state, how often a gate goes wrong,
+how often a readout is misread. This page takes <b>only those published numbers</b> and computes, in your browser, how good
+an entangled pair (a Bell pair) would come out on any coupled pair of qubits. Then it shows what happened when we
+actually ran such pairs — and whether the vendor's numbers had predicted it.</p>
+
+<h2>1. Pick a processor and a pair</h2>
+<div class="row"><select id="dev"></select><select id="pair"></select></div>
+<div class="readout">
+  <div class="card"><b id="f">—</b><span>predicted Bell fidelity F (raw, no correction)</span></div>
+  <div class="card"><b id="bd">—</b><span>readout ceiling: the largest correlation the published readout allows</span></div>
+  <div class="card"><b id="age">—</b><span>age of the vendor's numbers when we fetched them</span></div>
+</div>
+<p class="muted" id="detail"></p>
+<h2>2. The best pairs on this processor, by the vendor's numbers</h2>
+<div class="wrap"><table id="best"></table></div>
+
+<h2>3. Did the vendor's numbers predict what we measured?</h2>
+<p>Before each run we sealed a prediction made from the vendor's numbers of that hour; after the run we compared. The
+<em>readout ceiling</em> needs no model at all: if the readout errors are independent, as the vendor's per-qubit numbers
+assume, a measured correlation cannot exceed it. When it does by more than three standard errors, the published readout
+numbers were not what the hardware did in our run.</p>
+<div class="wrap"><table id="watch"></table></div>
+
+<h2>4. What this is, and what it is not</h2>
+<table>
+<tr><th>Model</th><td>Each gate adds depolarizing noise equal to the vendor's published gate error; each readout is misread
+with the vendor's published probabilities, independently per qubit. Nothing is fitted to our data.</td></tr>
+<tr><th>Ignored</th><td>Crosstalk, leakage, drift during the day, correlated readout errors. The model is deliberately the one
+the published numbers imply — so its misses show where the published numbers fall short.</td></tr>
+<tr><th>Data</th><td id="data"></td></tr>
+</table>
+</main>
+<script type="module">
+import { bell } from "./sim.mjs";
+const data = await (await fetch("./data.json")).json();
+const $ = (id) => document.getElementById(id);
+const devs = data.devices.filter((d) => Object.keys(d.pairs).length);
+const hours = (a, b) => (new Date(b) - new Date(a)) / 3.6e6;
+$("dev").innerHTML = devs.map((d, i) => `<option value="${i}">${d.vendor} · ${d.device} (${Object.keys(d.pairs).length} pairs)</option>`).join("");
+function ranked(d) {
+  return Object.entries(d.pairs).map(([k, e2]) => { const [a, b] = k.split("-"); return { k, a, b, ...bell(d.qubits[a], d.qubits[b], e2), e2 }; }).sort((x, y) => y.F - x.F);
+}
+function showDevice() {
+  const d = devs[+$("dev").value], r = ranked(d);
+  $("pair").innerHTML = r.map((p) => `<option value="${p.k}">qubits ${p.a}–${p.b} · F ${p.F.toFixed(3)}</option>`).join("");
+  $("best").innerHTML = "<tr><th>pair</th><th>F</th><th>2-qubit error</th><th>readout ceiling</th></tr>" +
+    r.slice(0, 10).map((p) => `<tr><td class="num">${p.a}–${p.b}</td><td class="num">${p.F.toFixed(3)}</td><td class="num">${(p.e2 * 100).toFixed(2)} %</td><td class="num">${p.bound.toFixed(3)}</td></tr>`).join("");
+  const age = hours(d.vendor_time, d.fetched_at);
+  $("age").textContent = (age < 48 ? age.toFixed(1) + " h" : (age / 24).toFixed(0) + " days");
+  showPair();
+}
+function showPair() {
+  const d = devs[+$("dev").value], [a, b] = $("pair").value.split("-"), o = bell(d.qubits[a], d.qubits[b], d.pairs[$("pair").value]);
+  $("f").textContent = o.F.toFixed(3); $("bd").textContent = o.bound.toFixed(3);
+  const q = (x) => d.qubits[x];
+  let ages = "";
+  if (d.age_h_of_numbers) ages = ` For this processor the numbers themselves were older than the "last update": T1 ${d.age_h_of_numbers.T1} h, readout ${d.age_h_of_numbers.readout_error} h, two-qubit gates ${d.age_h_of_numbers.gate_error_2q} h (medians).`;
+  if (d.readout_date) ages = ` The readout numbers in this file date from ${d.readout_date}.`;
+  $("detail").textContent = `Qubit ${a}: T1 ${q(a)[0].toFixed(0)} µs, T2 ${q(a)[1].toFixed(0)} µs, one-qubit error ${(q(a)[2] * 100).toFixed(2)} %, readout misread ${(q(a)[3] * 100).toFixed(1)} % / ${(q(a)[4] * 100).toFixed(1)} %. ` +
+    `Qubit ${b}: T1 ${q(b)[0].toFixed(0)} µs, T2 ${q(b)[1].toFixed(0)} µs, one-qubit error ${(q(b)[2] * 100).toFixed(2)} %, readout misread ${(q(b)[3] * 100).toFixed(1)} % / ${(q(b)[4] * 100).toFixed(1)} %. ` +
+    `Correlations X ${o.E.X.toFixed(3)}, Y ${o.E.Y.toFixed(3)}, Z ${o.E.Z.toFixed(3)}. Vendor time ${d.vendor_time}, fetched ${d.fetched_at}.` + ages;
+}
+$("dev").onchange = showDevice; $("pair").onchange = showPair;
+const W = data.watch_ledger || [];
+$("watch").innerHTML = W.length ? "<tr><th>processor, pair</th><th>predicted F</th><th>measured F</th><th>readout ceiling</th></tr>" + W.flatMap((w) =>
+  Object.values(w.pairs).map((p) => `<tr><td>${w.vendor === "ibm" ? "IBM" : "Quafu"} ${w.device}, ${p.pair.join("–")}</td><td class="num">${p.F_pred.toFixed(3)}</td><td class="num">${p.F_meas.toFixed(3)}</td>` +
+    `<td class="num ${p.bound_excess_sigma > 3 ? "bad" : "good"}">${p.bound_excess_sigma > 3 ? "exceeded by " + p.bound_excess_sigma.toFixed(0) + "σ" : "held"}</td></tr>`)).join("")
+  : "<tr><td class='muted'>No sealed run compared yet.</td></tr>";
+$("data").innerHTML = `Snapshot of the vendors' published calibration as fetched by our hourly read-only monitors; each device's raw file is kept with its sha256 (${devs.length} processors: ${devs.map((d) => d.device).join(", ")}).`;
+showDevice();
+</script>
+</body>
+</html>

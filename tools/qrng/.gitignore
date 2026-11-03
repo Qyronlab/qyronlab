@@ -1,0 +1,6 @@
+# keys made by a local run of the module stay local
+keys/
+kulcs*/
+*.key
+*.pem
+__pycache__/

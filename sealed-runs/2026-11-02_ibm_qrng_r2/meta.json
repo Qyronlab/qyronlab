@@ -1,0 +1,38 @@
+{
+ "plan_sha256": "f631d095d5477037ed06df5f6193ecd2fc0166c057f4477a5ddcfa0293edef94",
+ "backend": "ibm_fez",
+ "n_qubits": 156,
+ "usage_remaining_before": 86,
+ "calibration_before_sha256": "a0b47a721c1121216f2a48eef25dffbd145bfddc878d62f0cacdccbc81a6daf9",
+ "jobs": {
+  "A": {
+   "job": "dbkd1qonceqs73alko5g",
+   "shots": 4096,
+   "submitted_utc_local_clock": "2026-11-02T18:05:30Z",
+   "raw_sha256": "75fe62d10403ac34e0e80898c79a6e93d6404b5ba35a7885111adee79ac53575",
+   "raw_bytes": 79872,
+   "quantum_seconds": null,
+   "timestamps": {
+    "created": "2026-11-02T18:05:31.37585Z",
+    "finished": "2026-11-02T18:05:38.01436Z",
+    "running": "2026-11-02T18:05:32.94736Z"
+   }
+  },
+  "B": {
+   "job": "dbkd1r1ffo6c73bb8u90",
+   "shots": 4096,
+   "submitted_utc_local_clock": "2026-11-02T18:05:31Z",
+   "raw_sha256": "c7668976986688ac0bc5c9b20fb1793889f56aaec0f39ba8f37d118e6a8109c7",
+   "raw_bytes": 79872,
+   "quantum_seconds": null,
+   "timestamps": {
+    "created": "2026-11-02T18:05:32.65468Z",
+    "finished": "2026-11-02T18:05:40.157017Z",
+    "running": "2026-11-02T18:05:34.16645Z"
+   }
+  }
+ },
+ "calibration_after_sha256": "cef24f7ce7593c5f79d5bb342494bc14a54c8a2390783a5869e4d476c9c1a0cc",
+ "same_calibration": true,
+ "usage_remaining_after": 80
+}

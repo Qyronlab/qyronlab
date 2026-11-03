@@ -1,0 +1,60 @@
+{
+ "gep": "ibm_kingston",
+ "par": [
+  32,
+  33
+ ],
+ "job": "dbcdug424mrc73cjephg",
+ "loves": 4096,
+ "kalibracio_sha256": "a33fdac29328a4b564ec5b3a861a9650319dd8d64a01ea3bee9580435c203a01",
+ "sorok": [
+  {
+   "bazis": "XX",
+   "delay_us": 0,
+   "visszhang": false,
+   "counts": {
+    "11": 1918,
+    "00": 2043,
+    "10": 79,
+    "01": 56
+   },
+   "E": 0.93408203125
+  },
+  {
+   "bazis": "YY",
+   "delay_us": 0,
+   "visszhang": false,
+   "counts": {
+    "01": 1930,
+    "10": 2007,
+    "00": 97,
+    "11": 62
+   },
+   "E": -0.92236328125
+  },
+  {
+   "bazis": "ZZ",
+   "delay_us": 0,
+   "visszhang": false,
+   "counts": {
+    "00": 2055,
+    "11": 1928,
+    "01": 39,
+    "10": 74
+   },
+   "E": 0.94482421875
+  },
+  {
+   "bazis": "XY",
+   "delay_us": 0,
+   "visszhang": false,
+   "counts": {
+    "11": 985,
+    "00": 1083,
+    "10": 1041,
+    "01": 987
+   },
+   "E": 0.009765625
+  }
+ ]
+}

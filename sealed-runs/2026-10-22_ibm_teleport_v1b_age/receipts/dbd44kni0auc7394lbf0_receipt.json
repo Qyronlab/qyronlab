@@ -1,0 +1,25 @@
+{
+ "job_id": "dbd44kni0auc7394lbf0",
+ "fetched": "2026-10-22T17:47:50Z",
+ "responses": {
+  "job": {
+   "http": 200,
+   "file": "dbd44kni0auc7394lbf0_job.raw.json",
+   "sha256": "002ccd7cf0ee61f1d76414e00ab5884ff4c72e7c6c4c337c308ff8454d46acbb",
+   "bytes": 47486
+  },
+  "metrics": {
+   "http": 200,
+   "file": "dbd44kni0auc7394lbf0_metrics.raw.json",
+   "sha256": "7f8b1d1db948b49dde66d1c64301ad966ff03464ecc43dfea8f96079bffe5f7d",
+   "bytes": 322
+  }
+ },
+ "created": "2026-10-22T17:05:22.676467Z",
+ "state": "Completed",
+ "timestamps": {
+  "created": "2026-10-22T17:05:22.676467Z",
+  "finished": "2026-10-22T17:05:52.856353Z",
+  "running": "2026-10-22T17:05:24.990428Z"
+ }
+}

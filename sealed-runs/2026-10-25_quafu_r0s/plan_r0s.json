@@ -1,0 +1,152 @@
+{
+ "F_pred": {
+  "0": 0.993,
+  "1": 0.9723
+ },
+ "F_pred_keplet": "f_cz * f1q_a^2 * f1q_b^3 (a gyarto tablajabol; a: h + bazis, b: h, h + bazis) -- UGYANAZ, mint a Baihua-tervben",
+ "F_pred_reszlet": {
+  "0": {
+   "f1q_a": 0.999,
+   "f1q_b": 0.999,
+   "f_cz": 0.998,
+   "pair": [
+    34,
+    40
+   ]
+  },
+  "1": {
+   "f1q_a": 0.999,
+   "f1q_b": 0.992,
+   "f_cz": 0.998,
+   "pair": [
+    61,
+    68
+   ]
+  }
+ },
+ "K": {
+  "K1": "F_corr - 3 sigma > 0.5 mindket paron (osszefonodas)",
+  "K2": "F_corr a [F_pred-0.06, F_pred+0.02] savban (a gyartoi tabla ellenorzese)",
+  "K3": "XX > 3s, YY < -3s, ZZ > 3s (javitott)",
+  "K4": "kontroll |+0>: F_corr + 3 sigma < 0.5"
+ },
+ "aramkorok": [
+  {
+   "name": "bell_X",
+   "sha256": "301fa9ae5ba9681c0e4216bc2d1191d2cd13dacfcd7ecc091a85b75516acb64c"
+  },
+  {
+   "name": "bell_Y",
+   "sha256": "91b5c643e0cb4964c05ff9281b8e0498fb0d81e8d3676848a18736cabe1c5cc3"
+  },
+  {
+   "name": "bell_Z",
+   "sha256": "8c0f22731701c40805c22a076a79fdea7e50be349204c6490b2ed7ac0031f58c"
+  },
+  {
+   "name": "plus0_X",
+   "sha256": "b9a8e1068fde9fbb3741dc5b479da05aeda2cd3d581ef1d3a6207170884cd8ba"
+  },
+  {
+   "name": "plus0_Y",
+   "sha256": "440b50480d898f8e4a8304b2fa03fa88887cc090aa91d04ad6236a19f2634ffc"
+  },
+  {
+   "name": "plus0_Z",
+   "sha256": "5e64002419905b28080359337c09e2a480337a2055d82af0854bdd3ffd94c2dd"
+  },
+  {
+   "name": "cal00",
+   "sha256": "be0ae3bc9bf23889b7df6242a16f52da99919ca2cf32b5d6d0d787a72b71f153"
+  },
+  {
+   "name": "cal01",
+   "sha256": "a91560f6c0d4b2cb23e1c7d3be39df611efcb0428b7cf46deb856e87b9bdf891"
+  },
+  {
+   "name": "cal10",
+   "sha256": "e168d523ffd23d5766f33fcba35b6308d004715c4b9fff25808600ba73c2a653"
+  },
+  {
+   "name": "cal11",
+   "sha256": "6a77f91ad9cf38f4b3a31f8f90373bfb1bad2197ff45f019acf1298f7425eb4e"
+  }
+ ],
+ "compiler": "none",
+ "device": "Shenglian",
+ "ertekelo_azonos_a_baihua_tervevel": true,
+ "gyartoi_kalibracio": {
+  "calibrated_at": "2026-10-26T21:40:58+08:00",
+  "id": "6cc82c5acfeb0156",
+  "metadata_sha256": "d94f7712fe3a5d93b24de4c2c2c83863402c62a3993a1cbdc8340ffbd55169ce",
+  "sha256": "ad5ea9be4ea000bc0dffea040c7b901e0b0fcfb0f4ed192ded013f7bf0879b6b"
+ },
+ "janos": "2026-10-26 15:4xZ '2. A Baihua-feladat marad, mellette uj, kulon lezart R0 a Shenglianon'",
+ "kiolvasas_gyarto": {
+  "34": {
+   "cal": [
+    0.951,
+    0.944
+   ],
+   "census_10_11": [
+    0.986,
+    0.82
+   ]
+  },
+  "40": {
+   "cal": [
+    0.766,
+    0.774
+   ],
+   "census_10_11": [
+    0.881,
+    0.688
+   ]
+  },
+  "61": {
+   "cal": [
+    0.962,
+    0.933
+   ],
+   "census_10_11": [
+    0.962,
+    0.849
+   ]
+  },
+  "68": {
+   "cal": [
+    0.941,
+    0.877
+   ],
+   "census_10_11": [
+    0.958,
+    0.806
+   ]
+  }
+ },
+ "kiolvasas_javitas": "SAJAT cal00..cal11 aramkorokbol, qubitenkent, fuggetlen hiba feltevesevel",
+ "kiolvasas_megjegyzes": "a 40-es qubit gyartoi kiolvasasa ~0,77 mindket allapotban: a sajat javitas utan a sigma kb. ketszeres -- a szabaly nem valtozott emiatt",
+ "lezaras": "commit + a privat GitHub-tukor (cairn_push) a beküldés ELOTT; a fuggetlen B kar lenyomata utolag",
+ "megjegyzes": "ha a futasig a gyarto ujrakalibral, a joslat akkor is EZ marad; a futaskori calibration_id-t rogzitjuk",
+ "miert": "a Baihua R0 bell_X aramkore 10-26 07:40Z-kor runtime.deviceUnavailable hibaval leallt (6 ora a gepen eredmeny nelkul); a sor 22 581",
+ "nev": "R0s Bell t=0 a Quafu Shenglianon (a Baihua-R0 testvere; B1 masodik gep, elso lepes)",
+ "onteszt": "sim_onteszt.py PASS (statevector + ultetett kiolvasasi hiba; Bell F_corr 1,002 / 1,001, kontroll 0,244 / 0,241); az ertekelo bajt-azonos a Baihua-R0-eval, amelynek 3 mutansa ott FAIL",
+ "pairs": [
+  [
+   34,
+   40
+  ],
+  [
+   61,
+   68
+  ]
+ ],
+ "par_valasztas": "valaszt_r0s.py (kod, nem kez): platform-hasznalhato + census-megerositett el, CZ-huseg szerint; a 2. par kozos qubit es szomszed nelkul",
+ "scriptek": {
+  "aramkorok.py": "73c898589ced38b4df7a5cdad5a6653200c89d9e2518935fdff8dd59ab60514a",
+  "ertekel_r0.py": "b2d3cd1031854814d6a2d93f8b6ba4995c22b4988f53188fc7f378162dea8cb4",
+  "sim_onteszt.py": "ce08303fd6954bfb3a01d9cf812066d6b8f2cf551f0c3808561f90744a7d7bd2",
+  "valaszt_r0s.py": "0a98ee026cdfbbe1483e8ded6d1b7284d90f0f8aa541b103e7ab7f4b203624a3"
+ },
+ "shots": 8192
+}

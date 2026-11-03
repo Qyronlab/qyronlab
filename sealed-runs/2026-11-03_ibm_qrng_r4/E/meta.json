@@ -1,0 +1,13 @@
+{
+ "job": "dbkllt0nceqs73am5s3g",
+ "shots": 4096,
+ "submitted_utc_local_clock": "2026-11-03T03:54:27Z",
+ "raw_sha256": "2961af44dfa400c46150efd99f6823153a1c747bf17d88c2356fd55dd995e832",
+ "raw_bytes": 79872,
+ "quantum_seconds": null,
+ "timestamps": {
+  "created": "2026-11-03T03:54:28.474255Z",
+  "finished": "2026-11-03T03:54:34.416147Z",
+  "running": "2026-11-03T03:54:29.673252Z"
+ }
+}

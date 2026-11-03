@@ -1,0 +1,75 @@
+{
+ "v": 2,
+ "written_utc": "2026-11-02T18:01:40Z",
+ "backend": "ibm_fez",
+ "jobs": [
+  "A",
+  "B"
+ ],
+ "circuit": "H on every qubit, measure every qubit into c[i]; optimization_level 0; initial layout = identity; A and B submitted back to back",
+ "shots": 4096,
+ "options": {
+  "dynamical_decoupling": false,
+  "twirling_gates": false,
+  "twirling_measure": false
+ },
+ "packing": "per shot c0..c(n-1), c0 = rightmost char; shots concatenated in returned order; MSB-first; partial byte dropped",
+ "h_design": 6.0,
+ "source_id": {
+  "A": "ibm_fez_H_all_qubits_r2A",
+  "B": "ibm_fez_H_all_qubits_r2B"
+ },
+ "channel_rule": {
+  "channels": 156,
+  "h_bit": 0.5,
+  "policy": "exclude",
+  "max_p_broken": 0.707107,
+  "why": "the r1 rule unchanged: a channel is broken only when max(p0,p1) exceeds 0.707 after the 99 % margin; biased-but-usable channels are charged in the per-channel accounting"
+ },
+ "software": {
+  "qrng_modul.py_sha256": "8b32bb68192951d5b63261d8e6af1e60fa9d077b4e3eca27f1baa52c39c1fc3d",
+  "qrng_fuggetlen.py_sha256": "6436fa3c85b1090789203c72eacb528a9417244e80a5913fe8ef3474b7f630e3",
+  "where": "tools/qrng of the public repo (the published module and checker)"
+ },
+ "numbers_from": {
+  "file": "terv_szamok_r2.json",
+  "sha256": "9e1988952af5c051ca489b3f743655289e1af8ba5f76012d8f89f9b664c55d1f",
+  "r0_raw_sha256": "01edd075ee7df7baf87df1a76300c7243b44e393040f12cc69577c91f19e7ba1",
+  "r1_raw_sha256": "bf4cd6045f281366dc2d9dd4bf843c28a05a85d1047921800bb29cff2f13d9ef"
+ },
+ "calibration": "vendor properties snapshot (readout_error per qubit, last_update) before job A and after job B; K7 and K8 are scored only if the two last_update values are equal, otherwise reported as UNMEASURED (not re-scored)",
+ "predictions": {
+  "per_job (A and B each)": {
+   "K1": "module ACCEPTS the block under policy exclude (health tests 0 failures, h_mcv >= 6.0, |lag1| <= 5/sqrt(N), no replay)",
+   "K2": "h_mcv in [6.5, 8.0] bits per 8-bit sample",
+   "K3": "fraction of ones in [0.4, 0.6]",
+   "K4": "buyer checker (qrng_fuggetlen, --expect-rows 1) PASS, accounting and exclusion recomputed",
+   "K5": "excluded channels between 0 and 4 (r0 under the rule excludes 1, r1 0)",
+   "K6": "per-channel accounting h_acc in [6.731, 8.0] (r0 h_acc 7.231, r1 7.300; floor = min - 0.5 bit)"
+  },
+  "K7": "Pearson r of per-qubit p(1) between A and B >= 0.622 (two jobs minutes apart under ONE vendor calibration; expected r 0.872 if the per-qubit bias is constant within a calibration (var_bias pooled over r0 and r1 / (var_bias + var_noise)); 0.25 margin as in r1; below the floor = the bias is not even stable over minutes = uncalibratable drift above shot noise)",
+  "K8": "r(A,B) > r(A,r1) > r(A,r0) (the bias correlation falls with calibration age (minutes, ~2 days, ~5 days); day-scale reference r(r0,r1) = 0.356)",
+  "K9": "Pearson r of the vendor readout-error table, snapshot before A vs r1 >= 0.9 (the vendor's readout-error table was stable r0<->r1 (r 0.954); r2 (snapshot before A) vs r1)"
+ },
+ "thresholds": {
+  "K2": [
+   6.5,
+   8.0
+  ],
+  "K3": [
+   0.4,
+   0.6
+  ],
+  "K5": [
+   0,
+   4
+  ],
+  "K6": [
+   6.731,
+   8.0
+  ],
+  "K7_min_r": 0.622,
+  "K9_min_r": 0.9
+ },
+ "interpretation": "K1-K6 on both jobs = the published module and checker run end to end twice more on a real source. K7 is the physics claim r1 left open: the per-qubit bias is stable within one calibration (minutes) even though it moves between days. K7 red = the bias is drift above shot noise that no calibration can predict, so the module's channel test must work from the current block only (it already does) - this is then stated on the page. K8 orders the correlation by calibration age; K9 checks the vendor table is as stable as before. Statistics cannot certify quantumness; the receipt stays 'statistical'. A failure is reported as measured."
+}
