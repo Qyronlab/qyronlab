@@ -1,5 +1,7 @@
 # Qyronlab — public research repository
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23908657.svg)](https://doi.org/10.5281/zenodo.23908657)
+
 Everything here is either a sealed plan, a measurement, a recomputation, or a disagreement about one of those. Nothing is
 claimed that was not measured or read from a cited source; what a result does not certify is written next to it.
 
@@ -18,3 +20,5 @@ run offline. If a recipe is not enough to reproduce a number, file that as a rec
 
 **History.** This repository starts clean on 3 November 2026; the earlier private working repository is not published.
 Provenance does not depend on git history: the RFC 3161 tokens, the file hashes and the provider records are in the files.
+
+**Cite.** Each GitHub release is archived on Zenodo with a DOI. This release: `10.5281/zenodo.23908657` (all versions: `10.5281/zenodo.23908656`). Author: Qyronlab.
