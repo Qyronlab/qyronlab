@@ -24,5 +24,11 @@ classical one, and the record lists that among the things it does not prove.
 **Sample.** `SAMPLE_RECORD.json` is a synthetic record from the tool's self-test (stand-in device, stubbed time-stamp, test keys) — the
 shape, not a certification. Issued records live under `sealed-runs/verification-records/` with their public bytes next to them.
 
+**Two tiers.** *Tier 1 — seat verification record*: the seal's classical signatures (ed25519, ML-DSA-65, SLH-DSA) under pinned keys and the
+qubit seat checked; verdict `seat verified`. *Tier 2 — QSN, Quantum-safe Number*: tier 1 plus both post-quantum legs proven separately (FIPS 204
+lattice, FIPS 205 hash) plus a blind recheck of the record by an independent second arm (another model family or a person); only then is the
+number issued and the record's level reads `quantum-safe`. The name never precedes the measurement: a record that did not reach tier 2 has no QSN.
+A tier-1 record can be upgraded later; the old record stays valid and the new one cites it.
+
 **Ordering a seat.** For those without a seat of their own: the order is placed through the Replay Seal on our site; a seat ordered is a
 verification job, and this record is the deliverable. Details follow when the order path is live.
