@@ -30,5 +30,7 @@ lattice, FIPS 205 hash) plus a blind recheck of the record by an independent sec
 number issued and the record's level reads `quantum-safe`. The name never precedes the measurement: a record that did not reach tier 2 has no QSN.
 A tier-1 record can be upgraded later; the old record stays valid and the new one cites it.
 
-**Ordering a seat.** For those without a seat of their own: the order is placed through the Replay Seal on our site; a seat ordered is a
-verification job, and this record is the deliverable. Details follow when the order path is live.
+**Ordering.** Through the Replay Seal on our site, three items: *Make my seal + seat* — you bring only the content's hash; Qyronlab issues the
+seal, signs it with its published issuer key set (the record says so: it is a notary-style issuance, not your own key), runs the seat and issues
+the tier-1 record; you may add your own signature to the list later. *Verify my seal* — you bring a signed seal; we verify and issue the record.
+*QSN* — the tier-2 number with the second-arm recheck. Details follow when the order path is live.
